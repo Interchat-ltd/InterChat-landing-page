@@ -584,10 +584,6 @@ about__bg{
   color: var(--text-color-light);
 }
 
-feature__data:hover{
-  scale: 1.02;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-}
 
 .feature__image{
   position: relative;
@@ -615,6 +611,7 @@ feature__data:hover{
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease;
 }
+
 .feature__img2{
   position: absolute;
   bottom: 90px;
@@ -628,6 +625,7 @@ feature__data:hover{
 }
 
 .feature__container > div:nth-child(2){
+  padding: 5rem 0;
   text-align: left;
   background-color: #111B21;
 }
@@ -645,8 +643,11 @@ feature__data:hover{
 
 /* From Uiverse.io by alexmaracinaru */ 
 .cta {
+  position: relative;
   border: none;
   background: none;
+  width: 180px;
+  text-align: center;
   cursor: pointer;
   display: flex;
   margin-bottom: var(--mb-0-5);
@@ -655,8 +656,7 @@ feature__data:hover{
 
 .cta span {
   font-size: 14px;
-  padding-right: 15px;
-  text-transform: uppercase;
+  padding-right: 14px;
 }
 
 .cta svg {
@@ -673,9 +673,10 @@ feature__data:hover{
 }
 
 .hover-underline-animation {
+  padding: 6px;
   font: var(--body-font);
   position: relative;
-  color: var(--first-color);
+  color: var(--text-color);
 }
 
 .hover-underline-animation:after {
@@ -686,7 +687,7 @@ feature__data:hover{
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #000000;
+  background-color: var(--first-color);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -979,19 +980,22 @@ feature__data:hover{
   .home__container{
     grid-template-columns: 580px;
   }
-  .feature__img{
-    width: 580px;
-  }
 
   .home__data{
     width: 420px;
     justify-self: center;
   }
 
-  .feature__card{
+  .store-buttons{
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    column-gap: 1rem;
+  }
+
+  .feature__content{
     grid-template-columns: repeat(2, max-content);
     justify-content: center;
-    column-gap: 2rem;
+    column-gap: 8rem;
   }
 
 }
@@ -1105,10 +1109,51 @@ feature__data:hover{
     right: 0; /* Position the right container on the right */
   }
 
-  .form__container{
-    width: 500px;
-    justify-self: center;
+  .about__image{
+    position: relative;
+    width: 100%;
+    border-radius: .5rem;
+    z-index: 100;
   }
+  
+  .about__img-main{
+    width: 600px;
+    height: auto;
+  }
+  
+  .about__img1{
+    position: absolute;
+    top: 0;
+    left: 140px;
+    width: 120px;
+    height: auto;
+    z-index: 1;
+  }
+  .about__img2{
+    position: absolute;
+    bottom: 40px;
+    left: 95px;
+    width: 90px;
+    height: auto;
+    z-index: 1;
+  }
+  .about__img3{
+    position: absolute;
+    top: 0;
+    right: 240px;
+    width: 120px;
+    height: auto;
+    z-index: 1;
+  }
+  .about__img4{
+    position: absolute;
+    bottom: 20px;
+    right: 120px;
+    width: 120px;
+    height: auto;
+    z-index: 1;
+  }
+
 
   .feature__card{
   grid-template-columns: repeat(4, 1fr);
@@ -1116,37 +1161,7 @@ feature__data:hover{
   column-gap: 1.5rem;
   }
 
-  .timer__title-main{
-    font-size: var(--h1-font-size);
-    font-weight: var(--font-semi-bold);
-    margin-bottom: var(--mb-1);
-  }
-
-  .timer__number{
-    font-size: var(--biggest-font-size);
-    font-weight: var(--font-heavy);
-    margin-bottom: var(--mb-1);
-  }
-  .banner__title{
-    font-size: var(--h1-font-size);
-    font-weight: var(--font-semi-bold);
-    margin-bottom: var(--mb-1);
-    width: 700px;
-    justify-self: center;
-  }
-
-  .timer__signup{
-    width: 500px;
-    justify-self: center;
-  }
-
-  .signup__title{
-    font-size: var(--h1-font-size);
-    font-weight: var(--font-semi-bold);
-    margin-bottom: var(--mb-1);
-  }
-
-  .feature__data {
+  feature__data {
     width: 100%;
   }
 
