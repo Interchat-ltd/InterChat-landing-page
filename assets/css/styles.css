@@ -32,8 +32,8 @@
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Nunito Sans", sans-serif;
-  --biggest-font-size: 2.5rem;
-  --bigger-font-size: 2rem;
+  --biggest-font-size: 4rem;
+  --bigger-font-size: 2.5rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
@@ -44,8 +44,8 @@
   /*========== Font weight ==========*/
   --font-regular: 400;
   --font-medium: 500;
-  --font-semi-bold: 600;
-  --font-heavy: 800;
+  --font-semi-bold: 700;
+  --font-heavy: 900;
 
   /*========== z index ==========*/
   --z-tooltip: 10;
@@ -65,8 +65,8 @@
 /*========== Responsive typography ==========*/
 @media screen and (min-width: 1152px) {
   :root {
-    --biggest-font-size: 4rem;
-    --bigger-font-size: 2rem;
+    --biggest-font-size: 6rem;
+    --bigger-font-size: 3rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
@@ -108,8 +108,10 @@ button {
 }
 
 h1, h2, h3, h4 {
+  display: block;
   color: var(--title-color);
   font-weight: var(--font-medium);
+    line-height: 1;
 }
 
 ul {
@@ -128,8 +130,8 @@ svg {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 1020px;
-  margin-inline: 1.5rem;
+  max-width: 100%;
+  margin-inline: 3rem;
 }
 
 .grid {
@@ -281,8 +283,9 @@ svg {
 
 /* Change background header */
 .scroll-header{
-  background-color: var(--body-color);
-  box-shadow: 0 1px 4px hsla(0, 4%, 15%, .1);
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(1rem);
+  box-shadow: 0 1px 4px hsla(0, 4%, 15%, 0.2);
 }
 
 /* .scroll-header .nav__logo,
@@ -420,7 +423,7 @@ svg {
   align-items: center;
   gap: 1rem;
   margin-top: 1.5rem;
-  z-index: 99;
+  z-index: 10;
   transition: transform 0.3s ease;
 }
 
@@ -433,6 +436,8 @@ svg {
 .store-button:hover {
   transform: scale(1.05);
 }
+/*=============== ABOUT MAIN ===============*/
+
 
 
 /*=============== FEATURES ===============*/
@@ -462,7 +467,7 @@ svg {
 .about__bg::before {
   content: '';
   position: absolute;
-  width: 100px;
+  width: 100%;
   background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
   height: 200%;
   animation: rotBGimg2 8s linear infinite;
@@ -509,9 +514,19 @@ about__bg{
   border-radius: 1.5rem;
 }
 
-.section__title{
+.about__data{
+  text-align: center;
+  gap: 2.5rem;
+  margin-bottom: var(--mb-2-5);
+}
+
+
+.about__title{
+  font-weight: var(--font-semi-bold);
+  margin-bottom: var(--mb-0-75);
   z-index: 100;
 }
+
 
 .about__image{
   position: relative;
@@ -557,7 +572,6 @@ about__bg{
   height: auto;
   z-index: 1;
 }
-
 
 
 /*=============== FEATURES CARDS ===============*/
@@ -1016,7 +1030,7 @@ feature__data{
   }
 
   .store__button-container{
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     gap: 1rem;
   }
 
@@ -1053,7 +1067,7 @@ feature__data{
 
 @media screen and (min-width: 1150px) {
   .section{
-    padding-block: 7rem 0rem;
+    padding-block: 7rem 2rem;
   }
 
   .nav{
@@ -1110,11 +1124,6 @@ feature__data{
   margin-bottom: 3rem;
   }
 
-  .home__title {
-    font-size: 2.8rem;
-    font-weight: var(--font-semi-bold);
-    margin-bottom: var(--mb-0-5);
-  }
 
   .home__description{
     width: 500px;
@@ -1190,6 +1199,13 @@ feature__data{
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
+  .about__title{
+    padding: 7rem 10rem;
+    font-size: var(--bigger-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: var(--mb-0-75);
+    z-index: 100;
+  }
 
 
   .about__image{
@@ -1239,9 +1255,29 @@ feature__data{
 
   /*----- Feature 2 ------*/
 
+  .feature__content{
+    display: grid;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    column-gap: 8rem;
+  }
+
+  .feature__data{
+    width: 50%;
+    justify-self: center;
+    margin: auto 0;
+  }
+
+  .feature__image-container{
+    width: 500px;
+    justify-content: center;
+  }
+
   .feature__image{
     position: relative;
-    width: 100%;
+    width: 320px;
     border-radius: .5rem;
   }
   
@@ -1389,9 +1425,6 @@ feature__data{
 
 
 @media screen and (min-width: 1220px) {
-  .container{
-    margin-inline: auto;
-  }
 
   .home__container{
     align-items: center;
