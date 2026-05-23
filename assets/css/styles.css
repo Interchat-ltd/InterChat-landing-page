@@ -1257,11 +1257,10 @@ feature__data{
 
   .feature__content{
     display: grid;
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    justify-content: center;
-    column-gap: 8rem;
+    overflow: hidden;
+    justify-content: space-between;
   }
 
   .feature__data{
@@ -1277,7 +1276,6 @@ feature__data{
 
   .feature__image{
     position: relative;
-    width: 320px;
     border-radius: .5rem;
   }
   
