@@ -131,7 +131,7 @@ svg {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 100%;
-  margin-inline: 3rem;
+  margin-inline: 1.5rem;
 }
 
 .grid {
@@ -140,7 +140,7 @@ svg {
 }
 
 .section {
-  padding-block: 5rem 2rem;
+  padding-block: 3rem 1.5rem;
 }
 
 .section__title, 
@@ -311,10 +311,9 @@ svg {
   position: relative;
   align-items: center;
   text-align: center;
-  background-color: var(--container-color);
   overflow: hidden;
   border-radius: 1.5rem;
-  padding: 4rem 1.5rem 0 1.5rem;
+  padding: 4rem 1.5rem 2rem 1.5rem;
 }
 
 .home__bitmoji{
@@ -363,30 +362,20 @@ svg {
 }
 
 .home__img{
-  width: 250px;
+  width: 100%;
   height: auto;
 }
 
-.home__img2{
-  position: absolute;
-  top: 50px;
-  left: 12px;
-  width: 180px;
-  height: auto;
-  border-radius: 8px;
-  z-index: 1;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+.home__info{
+  padding: 1rem;
 }
 
-.home__img3{
-  position: absolute;
-  bottom: 20px;
-  right: 0;
-  width: 200px;
-  height: auto;
-  border-radius: 8px;
-  z-index: 1;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+.home__info-title{
+  font-size: var(--normal-font-size);
+}
+
+.brand{
+  color: var(--first-color);
 }
 
 
@@ -428,7 +417,7 @@ svg {
 }
 
 .store-button {
-  width: 184px;
+  width: 154px;
   height: auto;
   transition: transform 0.3s ease;
 }
@@ -535,43 +524,6 @@ about__bg{
   z-index: 100;
 }
 
-.about__img-main{
-  width: 300px;
-  height: auto;
-}
-
-.about__img1{
-  position: absolute;
-  top: 0;
-  left: 50px;
-  width: 80px;
-  height: auto;
-  z-index: 1;
-}
-.about__img2{
-  position: absolute;
-  bottom: 40px;
-  left: 35px;
-  width: 50px;
-  height: auto;
-  z-index: 1;
-}
-.about__img3{
-  position: absolute;
-  top: 0;
-  right: 30px;
-  width: 80px;
-  height: auto;
-  z-index: 1;
-}
-.about__img4{
-  position: absolute;
-  bottom: 20px;
-  right: 10px;
-  width: 80px;
-  height: auto;
-  z-index: 1;
-}
 
 
 /*=============== FEATURES CARDS ===============*/
@@ -584,16 +536,14 @@ about__bg{
 
 .feature__content{
   display: grid;
-  gap: 4rem;
+  gap: 1rem;
   justify-content: center;
-  padding: 1.5rem 0;
   border-radius: 1.5rem;
   margin-bottom: var(--mb-2-5);
 }
 
-feature__data{
-  padding: 5rem 0;
-  margin-bottom: var(--mb-2-5);
+.feature__data{
+  padding: 2rem 2rem;
 }
 
 .feature__title{
@@ -965,6 +915,7 @@ feature__data{
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 320px){
+
   .container {
     margin-inline: 1rem;
   }
@@ -973,10 +924,15 @@ feature__data{
     padding-inline: 3rem;
   }
 
+  .home__img{
+    width: 420px;
+  }
+
   .footer__data{
     grid-template-columns: 1fr;
     row-gap: 2rem;
   }
+
 }
 
 /* For medium devices */
@@ -984,6 +940,7 @@ feature__data{
   .feature__data{
     width: 290px;
   }
+
 
 }
 
@@ -1011,6 +968,12 @@ feature__data{
 }
 
 @media screen and (min-width: 768px) {
+
+  .container {
+  max-width: 100%;
+  margin-inline: 3rem; 
+  }
+
   .home__container{
     grid-template-columns: 580px;
   }
@@ -1146,7 +1109,7 @@ feature__data{
 }
 
 .home__img{
-  width: 450px;
+  width: 100%;
   height: auto;
 }
 
