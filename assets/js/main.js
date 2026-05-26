@@ -120,24 +120,29 @@ function animateBitmojis() {
 setInterval(animateBitmojis, 2000);
 
 
+/*=============== TESTIMONIALS SLIDER ===============*/
+const swiper = new Swiper('.testimonials-slider', {
+    loop: true,
+    spaceBetween: 16,
+    grabCursor: true,
+    slidesPerView: 'auto',
+    centeredSlides: 'auto',
+
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    },
+
+    pagination: {
+        el: ".swiper-pagination"
+    }
+});
+
+
 /*=============== Function to animate the count ===============*/
 
-
-
-// Function to reveal the banner and start the count
-const revealBanner = () => {
-    const bannerTitle = document.querySelector('.banner__title');
-    const countNumber = document.getElementById('count-number');
-
-    const bannerPosition = bannerTitle.getBoundingClientRect().top;
-    const screenPosition = window.innerHeight / 1.2;
-
-    if (bannerPosition < screenPosition) {
-        bannerTitle.classList.add('reveal');
-        animateCount(countNumber, 0, 10000, 4000); // Count from 0 to 10,000 in 8 seconds
-        window.removeEventListener('scroll', revealBanner); // Remove event listener after animation
-    }
-};
-
-// Add scroll event listener
-window.addEventListener('scroll', revealBanner);
