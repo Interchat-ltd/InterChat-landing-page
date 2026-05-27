@@ -129,11 +129,16 @@ const swiperTestimonial = new Swiper('.testimonials__swiper', {
   grabCursor: true,
   speed: 600,
 
-  // If we need pagination
   pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+ },
+
+
+  // If we need pagination
+  navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
-    clickable: true,
   },
 
   autoplay: {
