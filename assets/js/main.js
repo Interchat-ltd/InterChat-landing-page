@@ -121,28 +121,27 @@ setInterval(animateBitmojis, 2000);
 
 
 /*=============== TESTIMONIALS SLIDER ===============*/
-const swiper = new Swiper('.testimonials-slider', {
-    loop: true,
-    spaceBetween: 16,
-    grabCursor: true,
-    slidesPerView: 'auto',
-    centeredSlides: 'auto',
+const swiperTestimonial = new Swiper('.testimonials__swiper', {
+  // Optional parameters
+  loop: true,
+  spaceBetween: 24,
+  slidesPerView: 'auto',
+  grabCursor: true,
+  speed: 600,
 
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
+  // If we need pagination
+  pagination: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+    clickable: true,
+  },
 
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-    },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
 
-    pagination: {
-        el: ".swiper-pagination"
-    }
 });
-
 
 /*=============== Function to animate the count ===============*/
 

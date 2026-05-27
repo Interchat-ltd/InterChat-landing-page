@@ -11,7 +11,10 @@
             <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
             <!--=============== SWIPER CSS ===============-->
-            <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+            <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+            />
 
             <!--=============== CSS ===============-->
             <link rel="stylesheet" href="/assets/css/styles.css">
@@ -256,64 +259,71 @@
                     <div class="testimonials__intro">
                         <h2 class="testimonials__title">See how InterChat is<br>Transforming Lives.</h2>
                         <p class="testimonials__subtitle">Hear from Our Early Adopters.</p>
-
-                        <div class="testimonials__controls swiper-pagination">
-                            <button class="testimonials__nav swiper-button-prev" aria-label="Previous">
-                                <i class='bx bx-chevron-left'></i>
-                            </button>
-
-                            <button class="testimonials__nav swiper-button-next" aria-label="Next">
-                                <i class='bx bx-chevron-right'></i>
-                            </button>
-                        </div>
                     </div>
 
-                    <div class="testimonials__slider swiper">
+                    <div class="testimonials__swiper swiper">
                         <div class="swiper-wrapper">
                             <article class="testimonial__card swiper-slide">
-                                <p class="testimonial__text">InterChat helped me connect with believers worldwide! Now, I have a prayer group that supports me daily!</p>
+                                    <p class="testimonial__text">InterChat helped me connect with believers worldwide! Now, I have a prayer group that supports me daily!</p>
 
-                                <div class="testimonial__meta">
-                                    <div class="testimonial__avatar">
-                                        <img src="assets/img/1.png" alt="Annette Black">
+                                    <div class="testimonial__meta">
+                                        <div class="testimonial__avatar">
+                                            <img src="assets/img/1.png" alt="Annette Black">
+                                        </div>
+                                        <div class="testimonial__info">
+                                            <div class="testimonial__name">Annette Black</div>
+                                            <div class="testimonial__role">Real Estate Investor at <span class="testimonial__company">Johnson Properties</span></div>
+                                        </div>
                                     </div>
-                                    <div class="testimonial__info">
-                                        <div class="testimonial__name">Annette Black</div>
-                                        <div class="testimonial__role">Real Estate Investor at <span class="testimonial__company">Johnson Properties</span></div>
-                                    </div>
-                                </div>
                             </article>
 
                             <article class="testimonial__card swiper-slide">
-                                <p class="testimonial__text">I was struggling with consistency in prayer, but InterChat’s guided prayer sessions have been a game changer!</p>
+                                    <p class="testimonial__text">I was struggling with consistency in prayer, but InterChat’s guided prayer sessions have been a game changer!</p>
 
-                                <div class="testimonial__meta">
-                                    <div class="testimonial__avatar">
-                                        <img src="assets/img/2.png" alt="Annette Black">
+                                    <div class="testimonial__meta">
+                                        <div class="testimonial__avatar">
+                                            <img src="assets/img/2.png" alt="Annette Black">
+                                        </div>
+                                        <div class="testimonial__info">
+                                            <div class="testimonial__name">Annette Black</div>
+                                            <div class="testimonial__role">Real Estate Investor at <span class="testimonial__company">Johnson Properties</span></div>
+                                        </div>
                                     </div>
-                                    <div class="testimonial__info">
-                                        <div class="testimonial__name">Annette Black</div>
-                                        <div class="testimonial__role">Real Estate Investor at <span class="testimonial__company">Johnson Properties</span></div>
-                                    </div>
-                                </div>
                             </article>
 
                             <article class="testimonial__card swiper-slide">
-                                <p class="testimonial__text">The community in InterChat helped me find people who truly care about my spiritual growth.</p>
+                                    <p class="testimonial__text">The community in InterChat helped me find people who truly care about my spiritual growth.</p>
 
-                                <div class="testimonial__meta">
-                                    <div class="testimonial__avatar">
-                                        <img src="assets/img/3.png" alt="Michael Peters">
+                                    <div class="testimonial__meta">
+                                        <div class="testimonial__avatar">
+                                            <img src="assets/img/3.png" alt="Michael Peters">
+                                        </div>
+                                        <div class="testimonial__info">
+                                            <div class="testimonial__name">Michael Peters</div>
+                                            <div class="testimonial__role">Youth Pastor at <span class="testimonial__company">Hillside Church</span></div>
+                                        </div>
                                     </div>
-                                    <div class="testimonial__info">
-                                        <div class="testimonial__name">Michael Peters</div>
-                                        <div class="testimonial__role">Youth Pastor at <span class="testimonial__company">Hillside Church</span></div>
-                                    </div>
-                                </div>
                             </article>
-
                         </div>
+
+                                                <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                          <!-- If we need navigation buttons -->
+
+                        <div class="testimonials_controls">
+                            <div class="testimonials__nav swiper-button-prev">
+                                <i class='bx bx-chevron-left'></i>
+                            </div>
+                            <div class="testimonials__nav swiper-button-next ">
+                                <i class='bx bx-chevron-right'></i>
+                            </div>
+                        </div>
+
                     </div>
+
+
+
+
                 </div>
             </section>
 
@@ -426,7 +436,7 @@
             <!-- <script src="assets/js/scrollreveal.min.js"></script> -->
 
             <!--=============== SWIPER JS ===============-->
-            <script src="assets/js/swiper-bundle.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     
             <!--=============== MIXITUP FILTER ===============-->
             <!-- <script src="assets/js/mixitup.min.js"></script> -->

@@ -750,20 +750,6 @@ about__bg{
   gap: var(--mb-1-5);
 }
 
-.testimonials__controls{
-  position: relative;
-  display: flex;
-  gap: 1rem;
-}
-
-.testimonials__nav{
-  font-size: 1.25rem;
-  color: var(--title-color);
-  padding: .5rem;
-  border-radius: 50%;
-  border: 1px solid var(--first-color);
-  transition: .3s;
-}
 
 .testimonials__track{
   gap: 1.5rem;
@@ -804,15 +790,36 @@ about__bg{
 }
 
 /* Swiper class */
-.swiper{
-  margin-inline: initial;
+.testimonials__swiper {
+  width: 100%;
+  height: 100%;
 }
 
-.swiper-pagination-bullets.swiper-pagination-horizontal{
-  bottom: -2rem;
+.testimonials__controls{
+  position: absolute;
+  gap: 1rem;
 }
 
-.swiper-pagination-bullet{
+
+.testimonials__nav{
+  font-size: 1.25rem;
+  color: var(--title-color);
+  padding: .5rem;
+  border-radius: 50%;
+  border: 1px solid var(--first-color);
+  bottom: 0;
+  transition: .3s;
+}
+
+
+
+.testimonials__container .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+swiper-pagination-bullet{
   width: 1rem;
   height: 0.15rem;
   border-radius: 0;
@@ -821,7 +828,7 @@ about__bg{
   transition: background-color .3s, width .3s;
 }
 
-.swiper-pagination-bullet-active{
+swiper-pagination-bullet-active{
   width: 1.5rem;
   background-color: var(--title-color);
 }
