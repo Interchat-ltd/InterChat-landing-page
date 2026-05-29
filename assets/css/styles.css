@@ -739,10 +739,8 @@ about__bg{
 
 /*=============== TESTIMONIALS ===============*/
 .testimonials__container{
-  display: grid;
-  gap: var(--mb-3);
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  row-gap: var(--mb-3);
+  padding-bottom: 3rem;
 }
 
 .testimonials__intro{
@@ -750,10 +748,10 @@ about__bg{
   gap: var(--mb-1-5);
 }
 
-
-.testimonials__track{
-  gap: 1.5rem;
-  padding-bottom: 1rem;
+.testimonials__subtitle{
+  color: var(--text-color-light);
+  font-weight: var(--font-regular);
+  margin-bottom: 1.5rem
 }
 
 .testimonial__card{
@@ -793,6 +791,7 @@ about__bg{
 .testimonials__swiper {
   width: 100%;
   height: 100%;
+  padding-bottom: var(--mb-3);
 }
 
 .testimonials__controls{
@@ -813,7 +812,7 @@ about__bg{
 
 
 
-testimonials__container swiper-pagination {
+.testimonials .swiper-pagination {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
@@ -833,7 +832,35 @@ testimonials__container swiper-pagination {
   background-color: var(--title-color);
 }
 
+.testimonials .swiper-navigation-icon{
+  display: none;
+}
 
+.testimonials :is(.swiper-button-prev, .swiper-button-next) {
+  top: initial;
+  left: initial;
+  bottom: 0;
+  margin: initial;
+  width: 40px;
+  height: 40px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+  color: var(--body-color);
+  font-size: 1.5rem;
+  transition: background-color .4s;
+}
+
+.testimonials :is(.swiper-button-prev:hover, .swiper-button-next:hover) {
+  background-color: var(--first-color-alt);
+}
+
+.testimonials .swiper-button-prev {
+  left: calc(50% - 3rem);
+}
+
+.testimonials .swiper-button-next {
+  right: calc(50% - 3rem);
+}
 
 
 
