@@ -327,6 +327,7 @@ svg {
 
 
 .home__data{
+  display: grid;
   text-align: center;
   place-items: center;
 }
@@ -435,8 +436,7 @@ svg {
   display: grid;
   position: relative;
   width: 240px;
-  justify-content: center;
-  align-items: center;
+  place-items: center;
   gap: 1rem;
   margin-top: 1.5rem;
   z-index: 10;

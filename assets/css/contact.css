@@ -1,1 +1,243 @@
 @import url('/assets/css/styles.css');
+
+:root {
+  --bg: #f8f6ff;
+  --surface: #ffffff;
+  --surface-soft: rgba(255, 255, 255, 0.92);
+  --text: #1b1b2d;
+  --muted: #6b6d82;
+  --primary: #7d39ff;
+  --primary-soft: rgba(125, 57, 255, 0.14);
+  --border: rgba(125, 57, 255, 0.18);
+  --shadow: 0 24px 80px rgba(107, 84, 255, 0.14);
+}
+
+body {
+  background: var(--bg);
+}
+
+main.contact-page {
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+.contact-hero__top {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.contact-hero__title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 1rem 0 1rem;
+  line-height: 1.05;
+}
+
+.contact-hero__subtitle,
+.card-header p,
+.contact-support__intro p,
+.support-card p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.contact-hero__grid {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.contact-card,
+.contact-image-card,
+.support-card {
+  background: var(--surface);
+  border-radius: 32px;
+  border: 1px solid rgba(125, 57, 255, 0.12);
+  box-shadow: var(--shadow);
+}
+
+.contact-card {
+  padding: 2rem;
+}
+
+.card-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.card-header {
+  margin-bottom: 1.75rem;
+}
+
+.contact-form label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-size: 0.95rem;
+  color: #4b4d66;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid rgba(47, 39, 121, 0.12);
+  border-radius: 18px;
+  padding: 1rem 1.1rem;
+  background: #f9f7ff;
+  color: var(--text);
+  font-size: 0.98rem;
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.form-row {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-button {
+  margin-top: 1.75rem;
+  width: 100%;
+  max-width: 100%;
+  justify-self: start;
+}
+
+.contact-image-card {
+  position: relative;
+  min-height: 320px;
+  overflow: hidden;
+}
+
+.contact-image-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(125, 57, 255, 0.14) 100%);
+}
+
+.contact-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-support {
+  max-width: 1120px;
+  margin: 3rem auto 0;
+}
+
+.contact-support__intro {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.contact-support__intro h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin: 0.75rem 0 0.75rem;
+}
+
+.contact-support__social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  color: var(--muted);
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-links a {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #ffffff;
+  color: var(--text);
+  border: 1px solid rgba(125, 57, 255, 0.14);
+}
+
+.support-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.support-card {
+  padding: 1.75rem;
+}
+
+.support-card__icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: rgba(125, 57, 255, 0.14);
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.support-card h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.05rem;
+}
+
+.support-card__link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (min-width: 720px) {
+  main.contact-page {
+    padding: 3rem 2rem 4rem;
+  }
+
+  .contact-hero__grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+  }
+
+  .contact-card {
+    padding: 2.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-support__intro {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  .support-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  main.contact-page {
+    padding: 4rem 3rem 4.5rem;
+  }
+
+  .contact-hero__top {
+    text-align: left;
+    margin: 0 0 2.5rem;
+  }
+
+  .contact-hero__grid {
+    gap: 2.5rem;
+  }
+}
+

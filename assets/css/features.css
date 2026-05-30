@@ -1,7 +1,7 @@
 @import url('./styles.css');
 
 .feature__section-title {
+    margin-top: 2rem;
     font-size: var(--bigger-font-size);
     color: var(--title-color);
-    margin-bottom: 1rem;
 }
