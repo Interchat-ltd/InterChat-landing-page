@@ -1,13 +1,20 @@
 @import url('/assets/css/styles.css');
 
 /*========== Contact hero ==========*/
-.contact-hero {
+.contact__page {
   margin: 3rem auto 1rem;
+  display: grid;
+  place-items: center;
   text-align: center;
+}
+
+.contact__hero {
+  
 }
 
 .contact-hero__title {
   font-size: var(--biggest-font-size);
+  text-align: center;
   margin-bottom: var(--mb-1-5);
 }
 
@@ -36,14 +43,17 @@
 }
 
 
+
+/*========== Contact card ==========*/
+
 .contact__container{
+  max-width: 1200px;
+  display: grid;
   place-items: center;
 }
 
 
-/*========== Contact card ==========*/
-
-.contact-card {
+.contact__card {
   background: #ffffff;
   border: 1px solid rgba(125, 57, 255, 0.14);
   border-radius: 2rem;
@@ -55,38 +65,38 @@
   margin-bottom: var(--mb-2-5);
 }
 
-.contact-form label {
+.contact__form label {
   display: block;
   margin: 1rem 0 0.5rem;
   font-size: var(--smallest-font-size);
   color: var(--text-color);
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact__form input,
+.contact__form textarea {
   width: 100%;
   border: 1px solid rgba(47, 39, 121, 0.12);
   border-radius: 0.5rem;
-  padding: 1rem 1.1rem;
+  padding: .8rem 1rem;
   color: var(--text);
   font-size: var(--smallest-font-size);
   outline: none;
 }
 
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
+.contact__form input::placeholder,
+.contact__form textarea::placeholder {
   opacity: 0.5;
   color: var(--text-color-light);
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
+.contact__form input:focus,
+.contact__form textarea:focus {
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(125, 57, 255, 0.14);
 }
 
 
-.contact-form textarea {
+.contact__form textarea {
   resize: vertical;
 }
 
@@ -123,7 +133,7 @@
 /*========== Support ==========*/
 
 .support {
-  max-width: 1120px;
+  max-width: 1200px;
   margin: 3rem auto 0;
 }
 
@@ -198,13 +208,22 @@
 }
 
 .support-card h3 {
-  font-size: var(--h3-font-size);
+  font-size: var(--normal-font-size);
   margin-bottom: var(--mb-0-5);
 }
+
+.support-card p {
+  font-size: var(--smaller-font-size);
+  margin-bottom: var(--mb-0-5);
+}
+
+
+
 
 .support-card__link {
   display: inline-block;
   margin-top: 1rem;
+  font-size: var(--small-font-size);
   color: var(--first-color);
   text-decoration: none;
   font-weight: var(--font-medium);
@@ -221,24 +240,28 @@
     place-items: center;
   }
 
-  .contact-hero__grid,
-  .support__card-container {
+  .contact-hero__grid {
+    grid-template-columns: repeat(480px);
     justify-content: center;
-    max-width: 480px;
     align-items: center;
   }
+  
+
+  .support__card-container {
+    grid-template-columns: repeat(2, max-content);
+  }
+
 }
 
 
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .container {
-  max-width: 100%;
-  margin-inline: 3rem; 
+    margin-inline: 3rem;
   }
   
   .contact-hero {
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 580px;
     align-items: center;
   }
   
@@ -247,7 +270,7 @@
   }
 
   .contact-hero__grid {
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 580px;
     align-items: center;
   }
 
@@ -269,18 +292,16 @@
   }
 }
 
-@media (min-width: 1024px) {
-  main.contact-page {
-    padding: 4rem 3rem 4.5rem;
-  }
-
-  .contact-hero__top {
-    text-align: left;
-    margin: 0 0 2.5rem;
+@media (min-width: 1150px) {
+  .contact-hero {
+    grid-template-columns: 580px;
+    place-items: center;
   }
 
   .contact-hero__grid {
-    gap: 2.5rem;
+    grid-template-columns: repeat(2, 550px);
+    place-items: center;
   }
+
 }
 
