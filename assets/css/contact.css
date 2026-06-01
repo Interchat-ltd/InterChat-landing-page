@@ -12,29 +12,28 @@
   
 }
 
-.contact-hero__title {
+.contact__hero-title {
   font-size: var(--biggest-font-size);
   text-align: center;
-  margin-bottom: var(--mb-1-5);
 }
 
-.contact-hero__subtitle{
+.contact__hero-subtitle{
   padding: 0 2rem;
   font-size: var(--normal-font-size);
   color: var(--text-color-light);
 }
 
-.contact-hero__grid {
+.contact__hero-grid {
   display: grid;
   gap: 2rem;
 }
 
-.form-title {
+.form__title {
   font-size: var(--h2-font-size);
   margin-bottom: var(--mb-1-5);
 }
 
-.form-description {
+.form__description {
   color: var(--text-color-light);
   font-size: var(--normal-font-size);
 }
@@ -230,78 +229,75 @@
 }
 
 
-@media screen and (min-width: 576px) {
 
-  .container {
-    margin-inline: 2rem;
+/*============== Media Queries =============*/
+
+@media screen and (max-width: 320px){
+
+
+}
+
+
+@media screen and (min-width: 576px){
+  .nav__menu{
+    width: 380px;
+    margin-inline: auto;
   }
 
-  .contact__container {
-    place-items: center;
-  }
-
-  .contact-hero__grid {
-    grid-template-columns: repeat(480px);
+  .contact__hero-grid,
+  .support__container {
+    grid-template-columns: 420px;
     justify-content: center;
-    align-items: center;
   }
-  
 
-  .support__card-container {
-    grid-template-columns: repeat(2, max-content);
-  }
 
 }
 
 
 
 @media screen and (min-width: 768px) {
+
   .container {
-    margin-inline: 3rem;
+  max-width: 100%;
+  margin-inline: 3rem; 
   }
-  
-  .contact-hero {
+
+  .contact__hero{
     grid-template-columns: 580px;
-    align-items: center;
-  }
-  
-  main.contact-page {
-    padding: 3rem 2rem 4rem;
   }
 
-  .contact-hero__grid {
-    grid-template-columns: 580px;
-    align-items: center;
+  .home__data{
+    width: 580px;
+    justify-self: center;
   }
 
-  .contact-card {
-    padding: 2.5rem;
+  .store-buttons{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
   }
 
-  .form-row {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 
-  .support__intro {
-    grid-template-columns: 1fr auto;
-    align-items: center;
+}
+
+
+
+
+@media screen and (min-width: 1150px){
+  .contact__container,
+  .support {
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+  .contact__hero-grid,
+  .support__container {
+    grid-template-columns: 1fr 1fr;
   }
 
   .support__card-container {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 1150px) {
-  .contact-hero {
-    grid-template-columns: 580px;
-    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .contact-hero__grid {
-    grid-template-columns: repeat(2, 550px);
-    place-items: center;
-  }
+
 
 }
-
