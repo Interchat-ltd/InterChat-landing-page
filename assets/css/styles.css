@@ -225,7 +225,7 @@ svg {
   cursor: pointer;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 880px) {
   .nav__menu{
     display: flex;
     flex-direction: column;
@@ -254,7 +254,7 @@ svg {
 .nav__link{
   color: var(--title-color);
   font-weight: var(--font-medium);
-  font-size: var(--h2-font-size);
+  font-size: var(--h3-font-size);
   transition: .3s;
 }
 
@@ -416,7 +416,7 @@ svg {
   cursor: pointer;
   padding: 1rem 2rem;
   border-radius: 2.5rem;
-  font: var(--smaller-font-size);
+  font-size: var(--smaller-font-size);
   font-weight: var(--font-medium);
   z-index: var(--z-fixed);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -502,7 +502,6 @@ svg {
 
 .feature__card{
   background-color: var(--container-color);
-  max-width: 1380px;
   place-content: center;
   padding: 1.5rem;
   display: grid;
@@ -645,6 +644,11 @@ svg {
 
 
 /*=============== TESTIMONIALS ===============*/
+.testimonials{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
 .testimonials__container{
   row-gap: var(--mb-3);
   padding-bottom: 3rem;
@@ -1099,7 +1103,6 @@ svg {
   }
 
   .home__container,
-  .testimonials__container,
   .banner__container,
   .footer__container{
     grid-template-columns: 420px;
@@ -1107,8 +1110,10 @@ svg {
   }
 
   .store__button-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 180px);
     gap: 1rem;
+    justify-content: center;
   }
 
 
@@ -1121,9 +1126,40 @@ svg {
   margin-inline: 3rem; 
   }
 
-  .home__container{
+  .home__container,
+  .feature__heading{
     grid-template-columns: 580px;
+    justify-content: center;
   }
+
+  .home__data{
+    width: 580px;
+    justify-self: center;
+  }
+
+  .store-buttons{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+
+  .feature__content{
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    column-gap: 8rem;
+  }
+
+}
+
+
+@media screen and (min-width: 880px) {
+
+  .container {
+  max-width: 100%;
+  margin-inline: 3rem; 
+  }
+
 
   .home__data{
     width: 580px;
@@ -1283,35 +1319,23 @@ svg {
 
   .home__info-title{
     font-size: var(--h3-font-size);
-    font-weight: var(--font-medium);
+    font-weight: var(--font-regular);
     text-align: center;
   }
+
+
 
 /*----- About Main -----*/
 
 /*------------------ Feature Page  -------------------*/
 
-  /*----- Feature 2 ------*/
-
   .feature__heading{
     grid-template-columns: 640px;
     justify-content: center;
-  }
-
-
-
-  .feature__content{
-    display: grid;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-    justify-content: space-between;
-  }
-
-  .feature__heading{
     display: grid;
     gap: var(--mb-1-5);
     place-items: center;
+    margin-bottom: 2rem;
   }
 
 
@@ -1319,6 +1343,8 @@ svg {
     grid-template-columns: repeat(2, 1fr);
     width: 1200px;
     height: auto;
+    padding: 5rem;
+    margin-bottom: 5rem;
   }
 
 
@@ -1334,9 +1360,13 @@ svg {
     place-self: center;
   }
 
+
   .feature__image-container{
     width: 100%;
     justify-content: center;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    background-color: var(--body-color);
   }
 
   .feature__image{
@@ -1381,6 +1411,66 @@ svg {
     transition: all 0.3s ease;
   }
 
+  .testimonials__intro{
+    justify-content: center;
+    display: grid;
+    gap: var(--mb-1-5);
+    padding: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .testimonials__title{
+    font-size: var(--h3-font-size);
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+    text-align: left;
+  }
+
+  .testimonials__subtitle{
+    font-size: var(--normal-font-size);
+    text-align: left;
+    color: var(--text-color-light);
+    font-weight: var(--font-regular);
+    margin-bottom: 1.5rem
+  }
+
+  .testimonials__container {
+    display: grid;
+    grid-template-columns: 352px 1fr;
+    width: 1200px;
+    justify-content: center;
+  }
+
+  .testimonials__swiper,
+  .banner__container {
+    grid-template-columns: repeat(2, max-content);
+  }
+
+  .testimonials__controls {
+    position: absolute;
+    gap: 9rem;
+    bottom: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+
+/*-------------- Banner ------------*/
+.banner__container{
+  width: 1200px;
+  justify-content: center;
+}
+
+.banner__content{
+  width: 50%;
+}
+.banner__image{
+  width: 320px;
+}
+
+
+
+
 
 /*-------------- Footer ------------*/
 
@@ -1390,7 +1480,7 @@ svg {
     column-gap: 1.5rem;
   }
 
-  .banner__container, .footer__container {
+ .footer__container {
     grid-template-columns: 100%;
     justify-content: center;
   }

@@ -133,6 +133,12 @@ const swiperTestimonial = new Swiper('.testimonials__swiper', {
     el: ".swiper-pagination",
     clickable: true,
  },
+    breakpoints: {
+        1200: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+        }
+    },
 
 
   // If we need pagination
