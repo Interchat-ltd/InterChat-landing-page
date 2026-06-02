@@ -155,4 +155,29 @@ const swiperTestimonial = new Swiper('.testimonials__swiper', {
 });
 
 /*=============== Function to animate the count ===============*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 1500,
+    delay: 300,
+    easing: 'cubic-bezier(0.34, 1.56, 0.64, 1)',
+    reset: true
+});
+sr.reveal(`.home__data`, {origin: 'top'});
+sr.reveal(`.home__img` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
+sr.reveal(`.home__info-title` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
+sr.reveal(`.feature__heading` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
+sr.reveal(`.feature__data` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
+sr.reveal(`.testimonials__intro` , { delay: 600 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
+sr.reveal(`.banner__data` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
+sr.reveal(`.banner__result` , { delay: 800 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
+sr.reveal(`.banner__image` , { delay: 400 , origin: 'right' , reset: true, animation: 'fadeIn' });
+sr.reveal(`.footer__top` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
+sr.reveal(`.footer__watermark` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
 
+/*==== Contact Scroll Reveal ====*/
+sr.reveal(`.contact__hero` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
+sr.reveal(`.contact__card` , { delay: 800 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
+sr.reveal(`.contact-image-card` , { delay: 300 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
+sr.reveal(`.support__intro` , { delay: 600 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
+sr.reveal(`.support__card-container` , { delay: 800 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
