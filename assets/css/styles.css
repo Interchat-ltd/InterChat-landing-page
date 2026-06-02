@@ -1407,7 +1407,6 @@ svg {
     grid-template-columns: 352px 1fr;
     width: 1200px;
     justify-content: center;
-    padding-top: 7rem;
   }
 
   .testimonials__swiper {
@@ -1515,7 +1514,6 @@ svg {
   .footer__nav-link:hover{
     color: var(--first-color);
   }
-
   .footer__credit{
     display: block;
     color: var(--text-color-light);

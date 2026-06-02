@@ -115,7 +115,7 @@ const sendMail = (e) =>{
         //Close form
         setTimeout(()=>{
             window.location.href = 'message__feedback.html';
-        }, 2000)
+        }, 1000)
 
         
     })  
