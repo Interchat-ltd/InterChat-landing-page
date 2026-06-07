@@ -59,81 +59,7 @@ const scrollUp = () =>{
 
 window.addEventListener('scroll',scrollUp)
 
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-const sections = document.querySelectorAll('section[id]')
 
-const scrollActive = ()=>{
-    const scrollY = window.scrollY;
-
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 58;
-        sectionId = current.getAttribute('id'),
-        sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
-
-        if(scrollY > sectionTop &&  scrollY <= sectionTop + sectionHeight){
-            sectionsClass.classList.add('active-link')
-        }else{
-            sectionsClass.classList.remove('active-link')
-        }
-    })
-}
-
-window.addEventListener('scroll', scrollActive)
-
-/*=============== EMAIL JS ===============*/
-const contactForm = document.getElementById('myform'),
-      closeForm = document.getElementById('waitlist__form'),
-      contactMessage= document.getElementById('contact-message')
-
-const sendMail = (e) =>{
-    e.preventDefault()
-
-        // Show the loading spinner
-        const loadingSpinner = document.getElementById('loading-spinner');
-        loadingSpinner.classList.add('active');
-    
-
-        //ServiceID - templateID - #form - publicKey
-    emailjs.sendForm('service_hf05elj', 'template_5a5zqkw', '#myform', 'wEI9A4RRU34gRgARh')
-    .then(() =>{
-
-        // Hide the loading spinner
-        loadingSpinner.classList.remove('active');
-
-        //show Message
-        // contactMessage.textContent = 'Thank you for joining InterChat 😄'
-
-        //remove message after five seconds
-        // setTimeout(()=>{
-        //   contactMessage.textContent =''
-        // }, 2000)
-
-        //Clear input field
-        contactForm.reset();
-
-        //Close form
-        setTimeout(()=>{
-            window.location.href = 'message__feedback.html';
-        }, 1000)
-
-        
-    })  
-    .catch(() =>{
-        // Hide the loading spinner
-        loadingSpinner.classList.remove('active');
-
-        // Show error message
-        contactMessage.textContent = 'Message not sent (service error) 😞';
-
-        setTimeout(()=>{
-            contactMessage.textContent =''
-        }, 2000)
-    });
-
-};
-
-contactForm.addEventListener('submit', sendMail)
 
 
 /*=============== Animations ===============*/
@@ -223,6 +149,7 @@ sr.reveal(`.home__img` , { delay: 400 , origin: 'bottom' , reset: true, animatio
 sr.reveal(`.home__info-title` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
 sr.reveal(`.feature__heading` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
 sr.reveal(`.feature__data` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
+sr.reveal(`.feature__image-container` , { delay: 600 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
 sr.reveal(`.testimonials__intro` , { delay: 600 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
 sr.reveal(`.banner__data` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
 sr.reveal(`.banner__result` , { delay: 800 , origin: 'bottom' , reset: true, animation: 'fadeIn' });

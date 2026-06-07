@@ -2,14 +2,14 @@
 
 /*========== Contact hero ==========*/
 .contact__page {
-  margin: 3rem auto 1rem;
+  margin: 3rem auto 2rem;
   display: grid;
   place-items: center;
   text-align: center;
 }
 
 .contact__hero {
-  
+ padding-top: 4rem;
 }
 
 .contact__hero-title {
@@ -23,10 +23,6 @@
   color: var(--text-color-light);
 }
 
-.contact__hero-grid {
-  display: grid;
-  gap: 2rem;
-}
 
 .form__title {
   font-size: var(--h2-font-size);
@@ -257,10 +253,6 @@
 
 @media screen and (min-width: 768px) {
 
-  .container {
-  max-width: 100%;
-  margin-inline: 3rem; 
-  }
 
   .contact__hero{
     grid-template-columns: 580px;
@@ -286,12 +278,12 @@
 @media screen and (min-width: 1150px){
   .contact__container,
   .support {
-    max-width: 1200px;
+    max-width: 1300px;
     margin-inline: auto;
   }
   .contact__hero-grid,
   .support__container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .support__card-container {
