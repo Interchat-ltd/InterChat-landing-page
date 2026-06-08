@@ -24,19 +24,6 @@
 }
 
 
-.form__title {
-  font-size: var(--h2-font-size);
-  margin-bottom: var(--mb-1-5);
-}
-
-.form__description {
-  color: var(--text-color-light);
-  font-size: var(--normal-font-size);
-}
-.contact-image-card {
-  border-radius: 2rem;
-}
-
 
 
 /*========== Contact card ==========*/
@@ -45,27 +32,40 @@
   max-width: 1200px;
   display: grid;
   place-items: center;
+  width: 100%;
+  height: min-content;
 }
-
 
 .contact__card {
   background: #ffffff;
   border: 1px solid rgba(125, 57, 255, 0.14);
   border-radius: 2rem;
-  padding: 1.75rem;
+  padding: 3rem;
+  max-width: 100%;
+}
+
+.form__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.form__description {
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
 }
 
 
 .card-header {
-  margin-bottom: var(--mb-2-5);
+  margin-bottom: var(--mb-2);
 }
 
 .contact__form label {
   display: block;
   margin: 1rem 0 0.5rem;
-  font-size: var(--smallest-font-size);
+  font-size: var(--small-font-size);
   color: var(--text-color);
 }
+
 
 .contact__form input,
 .contact__form textarea {
@@ -73,8 +73,8 @@
   border: 1px solid rgba(47, 39, 121, 0.12);
   border-radius: 0.5rem;
   padding: .8rem 1rem;
-  color: var(--text);
-  font-size: var(--smallest-font-size);
+  color: var(--text-color);
+  font-size: var(--smaller-font-size);
   outline: none;
 }
 
@@ -95,30 +95,22 @@
   resize: vertical;
 }
 
-
 .contact-button {
-  margin-top: 1.75rem;
-  width: 100%;
-  max-width: 100%;
-  justify-self: start;
+  margin-top: 3rem;
+  width: 240px;
 }
 
 
-.contact-image-card {
+contact-image-card {
   position: relative;
-  min-height: 320px;
+  max-width: 100%;
   overflow: hidden;
 }
 
-.contact-image-card__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(125, 57, 255, 0.14) 100%);
-}
 
-.contact-image {
+contact-image {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   display: block;
 }
@@ -135,7 +127,6 @@
 .support__intro {
   display: grid;
   gap: 3rem;
-  margin-bottom: var(--mb-2-5);
 }
 
 .support__intro-title {
@@ -154,8 +145,7 @@
 }
 .support__social {
   display: grid;
-  flex-wrap: wrap;
-  gap: 1.25rem;
+  gap: 1rem;
   align-items: center;
   color: var(--muted);
 }
@@ -183,7 +173,7 @@
 
 .support-card {
   display: grid;
-  place-items: center;
+  place-items: left;
   border-radius: 1.5rem;
   padding: 1.5rem;
   background: #ffffff;
@@ -204,6 +194,7 @@
 
 .support-card h3 {
   font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
   margin-bottom: var(--mb-0-5);
 }
 
@@ -218,10 +209,10 @@
 .support-card__link {
   display: inline-block;
   margin-top: 1rem;
-  font-size: var(--small-font-size);
+  font-size: 16px;
   color: var(--first-color);
   text-decoration: none;
-  font-weight: var(--font-medium);
+  font-weight: var(--font-regular);
 }
 
 
@@ -262,13 +253,6 @@
     width: 580px;
     justify-self: center;
   }
-
-  .store-buttons{
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-  }
-
 
 }
 

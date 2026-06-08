@@ -354,7 +354,6 @@ svg {
   display: inline-flex;
   font-size: var(--smaller-font-size);
   color: var(--first-color);
-  background-color: var(--body-color);
 }
 
 
@@ -396,10 +395,10 @@ svg {
 
 
 .home__info-title{
-  letter-spacing: -0.3px;
   font-size: var(--normal-font-size);
   font-weight: var(--font-regular);
   text-align: left;
+  margin-bottom: 3rem;
 }
 
 .brand{
@@ -518,7 +517,9 @@ svg {
 }
 
 .feature__card:nth-child(2) h2,
-.feature__card:nth-child(2) p {
+.feature__card:nth-child(2) p,
+.feature__card:nth-child(2) .cta__action span,
+.feature__card:nth-child(2) svg{
   color: #fff;
 }
 
@@ -634,9 +635,10 @@ svg {
   justify-content: center;
   align-items: center;
 }
+
 .testimonials__container{
   row-gap: var(--mb-3);
-  padding-bottom: 3rem;
+  margin: 0 3rem;
 }
 
 .testimonials__intro{
@@ -664,15 +666,20 @@ svg {
   background-color: var(--body-color);
   padding: 1.5rem 1rem;
   display: grid;
-  gap: 1rem;
+  gap: 3rem;
   justify-content: center;
   border-radius: 1.5rem;
 }
 
 .testimonial__text{
-  font-size: var(--h3-font-size);
+  font-size: var(--normal-font-size);
   color: var(--text-color-light);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-regular);
+}
+
+.testimonial__role{
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
 }
 
 
@@ -684,7 +691,7 @@ svg {
 .testimonial__name{
   font-size: var(--small-font-size);
   color: var(--title-color);
-  font-weight: var(--font-semi-bold);
+  font-weight: var(--font-medium);
 }
 
 
@@ -723,19 +730,21 @@ svg {
   width: 1rem;
   height: 0.15rem;
   border-radius: 0;
-  background-color: var(--text-color);
+  background-color: var(--text-color-light);
   opacity: 1;
   transition: background-color .3s, width .3s;
 }
 
 .swiper-pagination-bullet-active{
   width: 1.5rem;
-  background-color: var(--title-color);
+  background-color: var(--first-color);
 }
+
 
 .testimonials .swiper-navigation-icon{
   display: none;
 }
+
 
 .testimonials :is(.swiper-button-prev, .swiper-button-next) {
   top: initial;
@@ -776,7 +785,8 @@ svg {
   gap: var(--mb-3);
   margin-top: 3rem;
   margin-bottom: 2rem;
-  background-color: var(--body-color);
+  background: #F01FD7;
+  background: linear-gradient(118deg, rgba(240, 31, 215, 0.14) 0%, rgba(146, 31, 228, 0.10) 50%, rgba(55, 31, 240, 0.18) 100%);
   padding: 3.5rem 1.5rem 1.5rem 1.5rem;
   justify-content: center;
   border-radius: 1.5rem;
@@ -785,6 +795,7 @@ svg {
 .banner__content{
   display: grid;
   gap: var(--mb-3);
+  padding: 2rem;
 }
 
 
@@ -792,7 +803,7 @@ svg {
 .banner__data{
   display: grid;
   text-align: center;
-  gap: 1.5rem;
+  gap: 1rem;
   place-items: center;
 }
 
@@ -802,7 +813,8 @@ svg {
   font-weight: var(--font-medium);
 }
 
-.banner__section-description{
+.banner__description{
+  font-size: var(--small-font-size);
   text-align: center;
   color: var(--text-color-light);
   font-weight: var(--font-regular);
@@ -1041,6 +1053,12 @@ svg {
     row-gap: 2rem;
   }
 
+  .testimonials__controls,
+  .swiper-button-next,
+  .swiper-button-prev{
+    visibility: hidden;
+  }
+
 }
 
 /* For medium devices */
@@ -1049,6 +1067,11 @@ svg {
     width: 290px;
   }
 
+  .testimonials__controls,
+  .swiper-button-next,
+  .swiper-button-prev{
+    visibility: hidden;
+  }
 
 }
 
@@ -1095,6 +1118,7 @@ svg {
   }
 
   .store-buttons{
+    display: grid;
     gap: 1rem;
     justify-content: center;
   }
@@ -1395,8 +1419,11 @@ svg {
   .testimonial__text{
     font-size: var(--normal-font-size);
     color: var(--text-color-light);
-    font-weight: var(--font-medium);
+    font-weight: var(--font-regular);
   }
+
+
+
   .testimonials__controls,
   .swiper-button-next,
   .swiper-button-prev{
@@ -1418,7 +1445,7 @@ svg {
 .banner__content,
 .banner__image{
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 
@@ -1428,6 +1455,9 @@ svg {
   font-weight: var(--font-medium);
 }
 
+.banner__description{
+  text-align: left;
+}
 
 .banner__data,
 .banner__result{
@@ -1439,12 +1469,11 @@ svg {
   display: grid;
   justify-content: start;
   grid-template-columns: repeat(2, 180px);
-  width: 100%;
 }
 
 .banner__result-title{
   font-size: var(--bigger-font-size);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-semi-bold);
   margin-bottom: var(--mb-0-75);
   color: var(--text-color);
 }
@@ -1478,16 +1507,24 @@ svg {
 
   .footer__nav-link{
     color: var(--text-color);
-    font-size: var(--normal-font-size);
+    font-size: var(--small-font-size);
     transition: .2s;
   }
   .footer__nav-link:hover{
     color: var(--first-color);
   }
+
+  .footer__social-text{
+    font-size: var(--small-font-size);
+  }
+
   .footer__credit{
     display: block;
     color: var(--text-color-light);
-    font-size: var(--small-font-size);
+    font-size: var(--smaller-font-size);
+  }
+  .footer__copy{
+    font-size: var(--smaller-font-size);
   }
 
   .footer__watermark{
