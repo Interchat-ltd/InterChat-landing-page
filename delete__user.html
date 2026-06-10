@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/logomain.png" type="image/x-icon">
+
+        <!--=============== BOXICONS ===============-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--=============== SWIPER CSS ===============-->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+        />
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="/assets/css/delete-user.css">
+
+        <title>Privacy Policy | InterChat</title>
+    </head>
+
+    <body>
+        <!--=============== HEADER ===============-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <div class="nav__logo">
+                    <img src="assets/img/Logo+text.png" class="nav__logo-img" alt="InterChat Logo">
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="/index.html" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/features.html" class="nav__link">Features</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/contact.html" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+
+                    <!--=============== NAV TOGGLE ===============-->
+                    <div class="nav__close" id="nav-close">
+                        <i class="bx bx-x"></i>
+                    </div>
+                </div>
+
+                <div class="nav__btn">
+                    <!--=============== NAV TOGGLE ===============-->
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="bx bx-grid-alt"></i>
+                    </div>
+
+                    <a class="button nav__button" id="nav__button">Download</a>
+                </div>
+            </nav>
+        </header>
+
+        <!--=============== DELETE USER ACCOUNT===============-->
+        <main class="main">
+            <section class="delete-account section">
+                <div class="delete-account__container container">
+                    
+                    <!--=============== Page Title ===============-->
+                    <div class="delete-account__header">
+                        <h1 class="delete-account__title">Delete Account</h1>
+                        <p class="delete-account__subtitle">This action cannot be undone. Please proceed with caution.</p>
+                    </div>
+
+                    <!--=============== User Information Section ===============-->
+                    <div class="delete-account__section">
+                        <h2 class="delete-account__section-title">Account Information</h2>
+                        <div id="user-info-container" class="delete-account__info-box">
+                            <div class="info-field">
+                                <label class="info-label">Email:</label>
+                                <p id="user-email" class="info-value">Loading...</p>
+                            </div>
+                            <div class="info-field">
+                                <label class="info-label">Username:</label>
+                                <p id="user-username" class="info-value">Loading...</p>
+                            </div>
+                            <div class="info-field">
+                                <label class="info-label">Account Status:</label>
+                                <p id="user-status" class="info-value">Loading...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--=============== Authentication Section ===============-->
+                    <div class="delete-account__section">
+                        <h2 class="delete-account__section-title">Verify Your Identity</h2>
+                        <p class="delete-account__description">To confirm account deletion, please verify your identity by entering your password.</p>
+                        
+                        <form id="delete-account-form" class="delete-account__form">
+                            <div class="form-group">
+                                <label for="password" class="form-label">Password</label>
+                                <input 
+                                    type="password" 
+                                    id="password" 
+                                    name="password" 
+                                    class="form-input" 
+                                    placeholder="Enter your password"
+                                    required
+                                >
+                                <small class="form-help">Your password is required for security verification</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-checkbox">
+                                    <input 
+                                        type="checkbox" 
+                                        id="confirm-delete" 
+                                        name="confirm-delete"
+                                        required
+                                    >
+                                    <span class="checkbox-label">I understand that this action is permanent and all my data will be deleted</span>
+                                </label>
+                            </div>
+
+                            <div class="form-actions">
+                                <a href="/index.html" class="button button--secondary">Cancel</a>
+                                <button type="submit" class="button button--danger" id="delete-btn">Delete Account</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!--=============== Warnings Section ===============-->
+                    <div class="delete-account__warnings">
+                        <h3 class="warnings__title">What happens when you delete your account:</h3>
+                        <ul class="warnings__list">
+                            <li>All your personal data will be permanently deleted</li>
+                            <li>Your messages and conversations will be removed</li>
+                            <li>Your profile will no longer be visible to other users</li>
+                            <li>Any purchased items or subscriptions will be cancelled</li>
+                            <li>This action cannot be reversed</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+
+
+
+
+
+
+
+
+        <!--==================== FOOTER ====================-->
+        <section class="footer section" id="footer">
+            <div class="footer__container container">
+                <div class="footer__top">
+                    <div class="footer__brand">
+                        <img src="assets/img/InterChat.png" alt="footer logo" class="footer__logo">
+                    </div>
+
+                    <nav class="footer__nav">
+                        <a href="/index.html" class="footer__nav-link">Home</a>
+                        <a href="/features.html" class="footer__nav-link">Features</a>
+                        <a href="/about.html" class="footer__nav-link">About</a>
+                        <a href="/privacy.html" class="footer__nav-link">Privacy</a>
+                        <a href="/terms.html" class="footer__nav-link">Terms</a>
+                    </nav>
+
+                    <div class="footer__social">
+                        <p class="footer__social-text">Socials</p>
+                        <a href="#" class="footer__social-link"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="footer__social-link"><i class='bx bxl-twitter'></i></a>
+                        <a href="#" class="footer__social-link"><i class='bx bxl-instagram'></i></a>
+                    </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="footer__watermark">
+                    <img src="assets/img/Footer-logo-blur.png" class="footer__watermark-img" alt="Watermark">
+                </div>
+
+                <div class="footer__bottom">
+                    <p class="footer__copy">&copy; 2025 - InterChat. All rights reserved.</p>
+                    <p class="footer__credit">Designed by Jaytech</p>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== LOADING SPINNER ===============-->
+        <div id="loading-spinner" class="loading-spinner">
+            <div class="spinner"></div>
+        </div>
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class='bx bx-up-arrow-alt'></i>
+        </a>
+
+        <!--=============== SCROLLREVEAL ===============-->
+        <!-- <script src="assets/js/scrollreveal.min.js"></script> -->
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+        <!--=============== MIXITUP FILTER ===============-->
+        <!-- <script src="assets/js/mixitup.min.js"></script> -->
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+
+
+        <!--=============== MAIL JS ===============-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+
+        <!--=============== DELETE USER JS ===============-->
+        <script src="assets/js/delete-user.js"></script>
+    </body>
+</html>

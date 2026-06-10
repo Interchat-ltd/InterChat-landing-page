@@ -162,3 +162,8 @@ sr.reveal(`.contact__card` , { delay: 800 , origin: 'bottom' , reset: true, anim
 sr.reveal(`.contact-image-card` , { delay: 300 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
 sr.reveal(`.support__intro` , { delay: 600 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
 sr.reveal(`.support__card-container` , { delay: 800 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
+
+
+
+
+/*=============== Delete user info ===============*/
