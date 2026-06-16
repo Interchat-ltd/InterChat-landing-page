@@ -2,7 +2,7 @@
 
 // API Configuration
 const API_CONFIG = {
-    BASE_URL: 'https://interchat.kinde.com/oauth2/auth?response_type=code&client_id=5cac5e6ebfa8421ea82564cbba6a580b&redirect_uri=https://www.interchatinc.com/auth&scope=openid%20profile%20email&state=1231231242545&connection_id=google', // Replace with actual EchoAPI endpoint
+    BASE_URL: 'https://openapi.echoapi.com/swagger/v3/66791d3bd002000?locale=en', // Replace with actual EchoAPI endpoint
     ENDPOINTS: {
         GET_USER: '/api/v1/user/profile',
         DELETE_USER: '/api/v1/user/delete',
@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadUserInformation();
     setupFormHandlers();
 });
+
 
 /**
  * Load user information from API
@@ -65,6 +66,7 @@ async function loadUserInformation() {
         showError('Failed to load user information. Please refresh the page.');
         showLoadingSpinner(false);
     }
+
 }
 
 /**
