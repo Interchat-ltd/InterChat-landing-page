@@ -66,81 +66,56 @@
                 <div class="delete-account__container container">
                     
                     <!--=============== Page Title ===============-->
-                    <div class="delete-account__header">
-                        <h1 class="delete-account__title">Delete Account</h1>
-                        <p class="delete-account__subtitle">This action cannot be undone. Please proceed with caution.</p>
-                    </div>
+                    <div class="wrapper">
 
-                    <!--=============== User Information Section ===============-->
-                    <div class="delete-account__section">
-                        <h2 class="delete-account__section-title">Account Information</h2>
-                        <div id="user-info-container" class="delete-account__info-box">
-                            <div class="info-field">
-                                <label class="info-label">Email:</label>
-                                <p id="user-email" class="info-value">Loading...</p>
+                        <div class="card">
+
+                            <div class="brand">
+                                <img src="/assets/img/InterChat.png" alt="InterChat">
+                                <h1>InterChat</h1>
                             </div>
-                            <div class="info-field">
-                                <label class="info-label">Username:</label>
-                                <p id="user-username" class="info-value">Loading...</p>
+
+                            <div class="icon">
+                                ⚠️
                             </div>
-                            <div class="info-field">
-                                <label class="info-label">Account Status:</label>
-                                <p id="user-status" class="info-value">Loading...</p>
+
+                            <h2>Delete Account</h2>
+
+                            <p class="description">
+                                We're sorry to see you go.
+                            </p>
+
+                            <div class="alert-box">
+                                <strong>Important:</strong>
+
+                                <ul>
+                                    <li>Your profile may be permanently removed.</li>
+                                    <li>Your messages and content may no longer be accessible.</li>
+                                    <li>This action may be irreversible.</li>
+                                </ul>
                             </div>
+
+                            <label>Email Address</label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your InterChat email"
+                            >
+
+                            <button id="deleteBtn">
+                                Request Account Deletion
+                            </button>
+
+                            <button id="cancelBtn" class="secondary">
+                                Keep My Account
+                            </button>
+
+                            <div id="response"></div>
+
                         </div>
+
                     </div>
-
-                    <!--=============== Authentication Section ===============-->
-                    <div class="delete-account__section">
-                        <h2 class="delete-account__section-title">Verify Your Identity</h2>
-                        <p class="delete-account__description">To confirm account deletion, please verify your identity by entering your password.</p>
-                        
-                        <form id="delete-account-form" class="delete-account__form">
-                            <div class="form-group">
-                                <label for="password" class="form-label">Password</label>
-                                <input 
-                                    type="password" 
-                                    id="password" 
-                                    name="password" 
-                                    class="form-input" 
-                                    placeholder="Enter your password"
-                                    required
-                                >
-                                <small class="form-help">Your password is required for security verification</small>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="form-checkbox">
-                                    <input 
-                                        type="checkbox" 
-                                        id="confirm-delete" 
-                                        name="confirm-delete"
-                                        required
-                                    >
-                                    <span class="checkbox-label">I understand that this action is permanent and all my data will be deleted</span>
-                                </label>
-                            </div>
-
-                            <div class="form-actions">
-                                <a href="/index.html" class="button button--secondary">Cancel</a>
-                                <button type="submit" class="button button--danger" id="delete-btn">Delete Account</button>
-                            </div>
-                        </form>
-                    </div>
-
-                    <!--=============== Warnings Section ===============-->
-                    <div class="delete-account__warnings">
-                        <h3 class="warnings__title">What happens when you delete your account:</h3>
-                        <ul class="warnings__list">
-                            <li>All your personal data will be permanently deleted</li>
-                            <li>Your messages and conversations will be removed</li>
-                            <li>Your profile will no longer be visible to other users</li>
-                            <li>Any purchased items or subscriptions will be cancelled</li>
-                            <li>This action cannot be reversed</li>
-                        </ul>
-                    </div>
-
-                </div>
             </section>
         </main>
 

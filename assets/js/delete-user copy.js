@@ -1,54 +1,108 @@
 /*=============== DELETE USER ACCOUNT JS ===============*/
+const API_URL =
+"https://interchat-app-server.onrender.com/api/v1/delete-account/request";
 
-const options = {
-  method: 'GET',
-  headers: {
-    Accept: '*/*',
-    'Accept-Encoding': 'gzip, deflate, br',
-    'User-Agent': 'EchoapiRuntime/1.1.0',
-    Connection: 'keep-alive',
-    Cookie: 'kbtc=ktt_44bf9fe145fb4207a2a632063502d0e4'
-  }
-};
+const deleteBtn = document.getElementById("deleteBtn");
+const cancelBtn = document.getElementById("cancelBtn");
+const responseBox = document.getElementById("response");
 
-fetch('https://openapi.echoapi.com/swagger/v3/66791d3bd002000?locale=en', options)
-  .then(response => response.json())
-  .then(response => console.log(response))
-  .catch(err => console.error(err));
+const params = new URLSearchParams(window.location.search);
 
-// API Configuration
-const API_CONFIG = {
-    BASE_URL: 'https://openapi.echoapi.com/swagger/v3/66791d3bd002000?locale=en', // Replace with actual EchoAPI endpoint
-    ENDPOINTS: {
-        GET_USER: '/api/v1/user/profile',
-        DELETE_USER: '/api/v1/user/delete',
-        VERIFY_AUTH: '/api/v1/user/verify-password'
+const prefilledEmail = params.get("email");
+
+if(prefilledEmail){
+    document.getElementById("email").value = prefilledEmail;
+}
+
+deleteBtn.addEventListener("click", async () => {
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    if(!email){
+
+        showMessage(
+            "Please enter your email address.",
+            "red"
+        );
+
+        return;
     }
-};
 
-console.log(getAuthToken);
+    const confirmed = confirm(
+        "Are you sure you want to request account deletion?"
+    );
 
-// DOM Elements
-const deleteAccountForm = document.getElementById('delete-account-form');
-const userEmailElement = document.getElementById('user-email');
-const userUsernameElement = document.getElementById('user-username');
-const userStatusElement = document.getElementById('user-status');
-const userInfoContainer = document.getElementById('user-info-container');
-const deleteBtn = document.getElementById('delete-btn');
-const passwordInput = document.getElementById('password');
-const confirmDeleteCheckbox = document.getElementById('confirm-delete');
-const loadingSpinner = document.getElementById('loading-spinner');
+    if(!confirmed){
+        return;
+    }
 
+    deleteBtn.disabled = true;
+    deleteBtn.innerText = "Submitting...";
 
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', () => {
-    loadUserInformation();
-    setupFormHandlers();
+    try{
+
+        const response = await fetch(API_URL,{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({
+                email
+            })
+        });
+
+        let data = {};
+
+        try{
+            data = await response.json();
+        }catch(err){}
+
+        if(response.ok){
+
+            showMessage(
+                "Your deletion request has been submitted successfully. Please check your email for further instructions.",
+                "green"
+            );
+
+            document.getElementById("email").disabled = true;
+        }
+        else{
+
+            showMessage(
+                data.message ||
+                "Unable to submit deletion request.",
+                "red"
+            );
+        }
+
+    }catch(error){
+
+        showMessage(
+            "Network error. Please try again later.",
+            "red"
+        );
+
+    }finally{
+
+        deleteBtn.disabled = false;
+        deleteBtn.innerText =
+        "Request Account Deletion";
+    }
+
+    
+
 });
 
+cancelBtn.addEventListener("click", () => {
 
+    window.location.href =
+    "https://indext.html";
 
-/**
- * Load user information from API
- */
+});
 
+function showMessage(message,color){
+
+    responseBox.innerText = message;
+    responseBox.style.color = color;
+}

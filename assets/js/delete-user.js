@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
 /**
  * Load user information from API
  */
@@ -52,6 +53,7 @@ async function loadUserInformation() {
                 'Content-Type': 'application/json'
             }
         });
+
 
         if (!response.ok) {
             throw new Error(`Failed to fetch user info: ${response.statusText}`);
