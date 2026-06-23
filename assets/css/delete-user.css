@@ -2,42 +2,44 @@
 
 /*=============== DELETE ACCOUNT SECTION ===============*/
 
-.wrapper{
+.delete-account{
+    display: grid;
     width:100%;
-    max-width:500px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
-.card{
+.delete-account__container{
+    display: grid;
+    justify-content: center;
+    justify-self: center;
+    max-width:640px;
     background:#fff;
     border-radius:24px;
     padding:35px;
     box-shadow:0 15px 50px rgba(0,0,0,.08);
 }
 
-.brand{
-    text-align:center;
-    margin-bottom:20px;
-}
 
-.brand h1{
-    color:#2563eb;
-    margin-top:10px;
-}
 
-.icon{
+icon{
     text-align:center;
     font-size:48px;
     margin-bottom:15px;
 }
 
-h2{
-    text-align:center;
-    margin-bottom:10px;
+
+.delete__title{
+    font-size: var(--bigger-font-size);
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 1rem;
 }
 
-.description{
+.delete__description{
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
     text-align:center;
-    color:#666;
     margin-bottom:25px;
 }
 
@@ -49,15 +51,45 @@ h2{
     margin-bottom:25px;
 }
 
-.alert-box ul{
+.alert__title{
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.alert-box{
     margin-top:10px;
     padding-left:20px;
 }
 
-label{
+.alert__list li{
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-regular);
+}
+
+.alert__list li::before {
+  content: '•';
+  position: relative;
+  margin-right: 0.5rem;
+  color: #f7c948;
+  font-weight: var(--font-medium);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+
+
+.form__data{
+    display: grid;
+    gap: 1rem;
+}
+
+
+.form__heading {
     display:block;
-    margin-bottom:8px;
-    font-weight:600;
+    font-size: var(--small-font-size);
+    margin-bottom:4px;
+    font-weight:var(--font-medium);
 }
 
 input{
@@ -68,33 +100,45 @@ input{
     margin-bottom:20px;
 }
 
+input::placeholder{
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+
+.action__container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
 button{
     width:100%;
+    font-size: var(--small-font-size);
     border:none;
     padding:15px;
     border-radius:12px;
     cursor:pointer;
-    font-size:16px;
-    font-weight:600;
+    font-weight: var(--font-normal);
 }
 
-#deleteBtn{
+.delete__button{
     background:#dc2626;
     color:white;
 }
 
-#deleteBtn:hover{
+
+.delete__button:hover {
     opacity:.95;
 }
 
-.secondary{
-    margin-top:10px;
+.secondary {
     background:#eef2ff;
-    color:#2563eb;
+    color: var(--text-color);
 }
 
 #response{
     margin-top:20px;
+    font-size: var(--small-font-size);
     text-align:center;
-    font-weight:600;
+    font-weight:var(--font-normal);
 }

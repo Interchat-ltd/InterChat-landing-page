@@ -61,63 +61,56 @@
         </header>
 
         <!--=============== DELETE USER ACCOUNT===============-->
-        <main class="main">
+
             <section class="delete-account section">
-                <div class="delete-account__container container">
-                    
-                    <!--=============== Page Title ===============-->
-                    <div class="wrapper">
+                <div class="delete-account__container container grid">
+                    <div class="delete__heading"> 
+                        <div class="icon">
+                            <i class="bx bx-alert-circle"></i>
+                        </div>
+                        <h4 class="delete__title">Delete Account?</h4>
 
-                        <div class="card">
+                        <p class="delete__description">
+                            We're sorry to see you go. This action cannot be undone 
+                            and all your data will be permanently removed.
+                        </p>
+                    </div>
 
-                            <div class="brand">
-                                <img src="/assets/img/InterChat.png" alt="InterChat">
-                                <h1>InterChat</h1>
-                            </div>
 
-                            <div class="icon">
-                                ⚠️
-                            </div>
 
-                            <h2>Delete Account</h2>
+                    <div class="alert-box">
+                                <h2 class="alert__title">Important:</h2>
 
-                            <p class="description">
-                                We're sorry to see you go.
-                            </p>
-
-                            <div class="alert-box">
-                                <strong>Important:</strong>
-
-                                <ul>
-                                    <li>Your profile may be permanently removed.</li>
-                                    <li>Your messages and content may no longer be accessible.</li>
-                                    <li>This action may be irreversible.</li>
+                                <ul class="alert__list">
+                                    <li class="alert__item">Your profile may be permanently removed.</li>
+                                    <li class="alert__item">Your messages and content may no longer be accessible.</li>
+                                    <li class="alert__item">This action may be irreversible.</li>
                                 </ul>
-                            </div>
+                    </div>
 
-                            <label>Email Address</label>
 
-                            <input
-                                type="email"
-                                id="email"
-                                placeholder="Enter your InterChat email"
-                            >
+                    <div class="form__data">
+                        <h3 class="form__heading">Email Address</h3>
 
-                            <button id="deleteBtn">
-                                Request Account Deletion
+                        <input type="email" id="email" placeholder="Enter your InterChat email">
+
+                        <div class="action__container grid">
+                            <button class="delete__button" id="deleteBtn">
+                                Delete Account
                             </button>
 
                             <button id="cancelBtn" class="secondary">
-                                Keep My Account
+                                Cancel
                             </button>
-
-                            <div id="response"></div>
-
                         </div>
 
+
+                        <div class="form__response" id="response"></div>
                     </div>
+
+
             </section>
-        </main>
+
 
 
 

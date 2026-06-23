@@ -64,8 +64,8 @@ deleteBtn.addEventListener("click", async () => {
                 "Your deletion request has been submitted successfully. Please check your email for further instructions.",
                 "green"
             );
-
-            document.getElementById("email").disabled = true;
+            
+            document.getElementById("email").disabled = true; 
         }
         else{
 
