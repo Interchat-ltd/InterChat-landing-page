@@ -1,8 +1,8 @@
 /*=============== DELETE USER ACCOUNT JS ===============*/
 const API_URL =
-"https://interchat-app-server.onrender.com/api/v1/delete-account/request";
+"https://openapi.echoapi.com/swagger/v3/670985969c02000?locale=en";
 
-const deleteBtn = document.getElementById("deleteBtn");
+const deleteBtn = document.getElementById("requestBtn");
 const cancelBtn = document.getElementById("cancelBtn");
 const responseBox = document.getElementById("response");
 

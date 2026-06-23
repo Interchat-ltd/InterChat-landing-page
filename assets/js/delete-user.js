@@ -1,76 +1,242 @@
 /*=============== DELETE USER ACCOUNT JS ===============*/
 
-// API Configuration
+// ========== API Configuration ==========
 const API_CONFIG = {
-    BASE_URL: 'https://openapi.echoapi.com/swagger/v3/66791d3bd002000?locale=en', // Replace with actual EchoAPI endpoint
+    BASE_URL: 'https://openapi.echoapi.com/swagger/v3/66791d3bd002000?locale=en', // Update with your actual API URL
     ENDPOINTS: {
-        GET_USER: '/api/v1/user/profile',
-        DELETE_USER: '/api/v1/user/delete',
-        VERIFY_AUTH: '/api/v1/user/verify-password'
+        REQUEST_DELETION: '/api/v1/delete-account/request',
+        CONFIRM_DELETION: '/api/v1/delete-account/confirm'
     }
 };
 
+// ========== State Management ==========
+let currentStep = 1;
+let userEmail = '';
 
-// DOM Elements
-const deleteAccountForm = document.getElementById('delete-account-form');
-const userEmailElement = document.getElementById('user-email');
-const userUsernameElement = document.getElementById('user-username');
-const userStatusElement = document.getElementById('user-status');
-const userInfoContainer = document.getElementById('user-info-container');
-const deleteBtn = document.getElementById('delete-btn');
-const passwordInput = document.getElementById('password');
-const confirmDeleteCheckbox = document.getElementById('confirm-delete');
-const loadingSpinner = document.getElementById('loading-spinner');
+// ========== DOM Elements ==========
+const step1Form = document.getElementById('step-1');
+const step2Form = document.getElementById('step-2');
+const emailInput = document.getElementById('email');
+const tokenInput = document.getElementById('token');
+const requestBtn = document.getElementById('requestBtn');
+const confirmBtn = document.getElementById('confirmBtn');
+const cancelBtn = document.getElementById('cancelBtn');
+const backBtn = document.getElementById('backBtn');
+const responseBox = document.getElementById('response');
+const confirmEmailDisplay = document.getElementById('confirmEmail');
 
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', () => {
-    loadUserInformation();
-    setupFormHandlers();
+// ========== Event Listeners ==========
+requestBtn.addEventListener('click', handleRequestDeletion);
+confirmBtn.addEventListener('click', handleConfirmDeletion);
+cancelBtn.addEventListener('click', handleCancel);
+backBtn.addEventListener('click', handleBackToStep1);
+emailInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter' && currentStep === 1) handleRequestDeletion();
+});
+tokenInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter' && currentStep === 2) handleConfirmDeletion();
 });
 
+// ========== Step 1: Request Deletion ==========
+async function handleRequestDeletion() {
+    const email = emailInput.value.trim();
 
-
-/**
- * Load user information from API
- */
-async function loadUserInformation() {
-    try {
-        showLoadingSpinner(true);
-        
-        // Get auth token from localStorage or sessionStorage
-        const authToken = getAuthToken();
-        
-        if (!authToken) {
-            showError('Authentication token not found. Please log in again.');
-            redirectToLogin();
-            return;
-        }
-
-        const response = await fetch(`${API_CONFIG.BASE_URL}${API_CONFIG.ENDPOINTS.GET_USER}`, {
-            method: 'GET',
-            headers: {
-                'Authorization': `Bearer ${authToken}`,
-                'Content-Type': 'application/json'
-            }
-        });
-
-
-        if (!response.ok) {
-            throw new Error(`Failed to fetch user info: ${response.statusText}`);
-        }
-
-        const userData = await response.json();
-        displayUserInformation(userData.data || userData);
-        showLoadingSpinner(false);
-
-    } catch (error) {
-        console.error('Error loading user information:', error);
-        showError('Failed to load user information. Please refresh the page.');
-        showLoadingSpinner(false);
+    // Validation
+    if (!email) {
+        showMessage('Please enter your email address.', 'error');
+        return;
     }
 
+    if (!isValidEmail(email)) {
+        showMessage('Please enter a valid email address.', 'error');
+        return;
+    }
+
+    // Confirmation dialog
+    const confirmed = confirm(
+        `Are you sure you want to request deletion of the account associated with ${email}?\n\nYou'll receive a verification code via email.`
+    );
+
+    if (!confirmed) return;
+
+    // Disable button and show loading state
+    requestBtn.disabled = true;
+    requestBtn.innerText = 'Sending request...';
+
+    try {
+        const response = await fetch(
+            `${API_CONFIG.BASE_URL}${API_CONFIG.ENDPOINTS.REQUEST_DELETION}`,
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email })
+            }
+        );
+
+        let data = {};
+        try {
+            data = await response.json();
+        } catch (err) {
+            console.error('Failed to parse response:', err);
+        }
+
+        if (response.ok) {
+            showMessage(
+                'Deletion request submitted successfully! Check your email for the verification code.',
+                'success'
+            );
+            userEmail = email;
+            emailInput.disabled = true;
+            
+            // Move to step 2 after 2 seconds
+            setTimeout(() => {
+                moveToStep2();
+            }, 2000);
+        } else {
+            const errorMsg = data.message || 
+                           (response.status === 404 ? 'Email not found in our system.' : 
+                            'Unable to submit deletion request. Please try again.');
+            showMessage(errorMsg, 'error');
+        }
+    } catch (error) {
+        console.error('Network error:', error);
+        showMessage(
+            'Network error. Please check your connection and try again.',
+            'error'
+        );
+    } finally {
+        requestBtn.disabled = false;
+        requestBtn.innerText = 'Request Deletion';
+    }
 }
 
+// ========== Step 2: Confirm Deletion ==========
+async function handleConfirmDeletion() {
+    const token = tokenInput.value.trim();
+
+    // Validation
+    if (!token) {
+        showMessage('Please enter the verification code.', 'error');
+        return;
+    }
+
+    // Confirmation dialog
+    const finalConfirmed = confirm(
+        'FINAL WARNING: This will permanently delete your account and all associated data.\n\nThis action cannot be undone. Are you absolutely sure?'
+    );
+
+    if (!finalConfirmed) return;
+
+    // Disable button and show loading state
+    confirmBtn.disabled = true;
+    confirmBtn.innerText = 'Confirming...';
+
+    try {
+        const response = await fetch(
+            `${API_CONFIG.BASE_URL}${API_CONFIG.ENDPOINTS.CONFIRM_DELETION}`,
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ token })
+            }
+        );
+
+        let data = {};
+        try {
+            data = await response.json();
+        } catch (err) {
+            console.error('Failed to parse response:', err);
+        }
+
+        if (response.ok) {
+            showMessage(
+                'Your account has been successfully deleted. Redirecting to home page...',
+                'success'
+            );
+            
+            // Redirect after 3 seconds
+            setTimeout(() => {
+                window.location.href = '/index.html';
+            }, 3000);
+        } else {
+            const errorMsg = data.message || 
+                           (response.status === 404 ? 'Invalid or expired verification code.' : 
+                            'Failed to confirm deletion. Please try again.');
+            showMessage(errorMsg, 'error');
+        }
+    } catch (error) {
+        console.error('Network error:', error);
+        showMessage(
+            'Network error. Please check your connection and try again.',
+            'error'
+        );
+    } finally {
+        confirmBtn.disabled = false;
+        confirmBtn.innerText = 'Confirm Deletion';
+    }
+}
+
+// ========== Navigation ==========
+function moveToStep2() {
+    currentStep = 2;
+    step1Form.classList.remove('active');
+    step2Form.classList.add('active');
+    confirmEmailDisplay.textContent = userEmail;
+    tokenInput.focus();
+}
+
+function handleBackToStep1() {
+    currentStep = 1;
+    step2Form.classList.remove('active');
+    step1Form.classList.add('active');
+    tokenInput.value = '';
+    responseBox.textContent = '';
+    emailInput.focus();
+}
+
+function handleCancel() {
+    const confirmed = confirm('Are you sure you want to cancel? Any unsaved changes will be lost.');
+    if (confirmed) {
+        window.location.href = '/index.html';
+    }
+}
+
+// ========== Utilities ==========
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+function showMessage(message, type) {
+    responseBox.textContent = message;
+    responseBox.className = `form__response ${type}`;
+    
+    // Auto-clear error messages after 5 seconds
+    if (type === 'error') {
+        setTimeout(() => {
+            if (responseBox.textContent === message) {
+                responseBox.textContent = '';
+                responseBox.className = 'form__response';
+            }
+        }, 5000);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/** SUBCODES  */
 /**
  * Display user information on the page
  */

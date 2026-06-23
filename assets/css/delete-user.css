@@ -142,3 +142,132 @@ button{
     text-align:center;
     font-weight:var(--font-normal);
 }
+
+/*=============== FORM STEPS ===============*/
+.form-step {
+    display: none;
+    animation: slideInFrom .3s ease-in-out;
+}
+
+.form-step.active {
+    display: block;
+}
+
+@keyframes slideInFrom {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.step-info {
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.email-display {
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-size: var(--smaller-font-size);
+}
+
+.email-display p {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.email-display strong {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+/*=============== FORM RESPONSE MESSAGES ===============*/
+.form__response {
+    margin-top: 20px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    font-size: var(--small-font-size);
+    text-align: center;
+    font-weight: var(--font-normal);
+    min-height: 20px;
+    animation: fadeIn .3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.form__response.success {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #6ee7b7;
+}
+
+.form__response.error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
+/*=============== BUTTON STATES ===============*/
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    transition: transform .2s ease;
+}
+
+.delete__button:disabled {
+    background: #91342d;
+}
+
+.secondary:disabled {
+    background: #d1d5db;
+    color: #6b7280;
+}
+
+/*=============== RESPONSIVE DESIGN ===============*/
+@media screen and (max-width: 480px) {
+    .delete-account__container {
+        padding: 24px;
+    }
+
+    .delete__title {
+        font-size: var(--h3-font-size);
+    }
+
+    input {
+        padding: 12px;
+        margin-bottom: 16px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: var(--smaller-font-size);
+    }
+
+    .action__container {
+        gap: 10px;
+    }
+
+    .alert-box {
+        padding: 14px;
+    }
+}

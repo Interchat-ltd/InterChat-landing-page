@@ -19,7 +19,7 @@
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="/assets/css/delete-user.css">
 
-        <title>Privacy Policy | InterChat</title>
+        <title>Delete users | InterChat</title>
     </head>
 
     <body>
@@ -90,20 +90,45 @@
 
 
                     <div class="form__data">
-                        <h3 class="form__heading">Email Address</h3>
+                        <!-- STEP 1: Email Input -->
+                        <div id="step-1" class="form-step active">
+                            <h3 class="form__heading">Email Address</h3>
+                            <p class="step-info">Enter your InterChat email to request account deletion. You'll receive a verification code.</p>
 
-                        <input type="email" id="email" placeholder="Enter your InterChat email">
+                            <input type="email" id="email" placeholder="Enter your InterChat email">
 
-                        <div class="action__container grid">
-                            <button class="delete__button" id="deleteBtn">
-                                Delete Account
-                            </button>
+                            <div class="action__container grid">
+                                <button class="delete__button" id="requestBtn">
+                                    Request Deletion
+                                </button>
 
-                            <button id="cancelBtn" class="secondary">
-                                Cancel
-                            </button>
+                                <button id="cancelBtn" class="secondary">
+                                    Cancel
+                                </button>
+                            </div>
                         </div>
 
+                        <!-- STEP 2: Token Confirmation -->
+                        <div id="step-2" class="form-step">
+                            <h3 class="form__heading">Verify Deletion Request</h3>
+                            <p class="step-info">Enter the verification code sent to your email address.</p>
+
+                            <div class="email-display">
+                                <p>Code sent to: <strong id="confirmEmail"></strong></p>
+                            </div>
+
+                            <input type="text" id="token" placeholder="Enter verification code" maxlength="6">
+
+                            <div class="action__container grid">
+                                <button class="delete__button" id="confirmBtn">
+                                    Confirm Deletion
+                                </button>
+
+                                <button id="backBtn" class="secondary">
+                                    Back
+                                </button>
+                            </div>
+                        </div>
 
                         <div class="form__response" id="response"></div>
                     </div>
@@ -185,6 +210,6 @@
         </script>
 
         <!--=============== DELETE USER JS ===============-->
-        <script src="assets/js/delete-user copy.js"></script>
+        <script src="assets/js/delete-user.js"></script>
     </body>
 </html>
