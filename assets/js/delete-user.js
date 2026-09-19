@@ -95,8 +95,8 @@ async function handleRequestDeletion() {
                 moveToStep2();
             }, 2000);
         } else {
-            const errorMsg = data.error || data.message || 'Unable to submit deletion request. Please try again.';
-            showMessage(errorMsg, 'error');
+            const rawMsg = data.error || data.message || 'Unable to submit deletion request. Please try again.';
+            showMessage(sanitizeErrorMessage(rawMsg), 'error');
         }
     } catch (error) {
         console.error('Network error:', error);
@@ -161,8 +161,8 @@ async function handleConfirmDeletion() {
                 window.location.href = '/index.html';
             }, 3000);
         } else {
-            const errorMsg = data.error || data.message || 'Invalid or expired verification code.';
-            showMessage(errorMsg, 'error');
+            const rawMsg = data.error || data.message || 'Invalid or expired verification code.';
+            showMessage(sanitizeErrorMessage(rawMsg), 'error');
         }
     } catch (error) {
         console.error('Network error:', error);
@@ -205,6 +205,19 @@ function handleCancel() {
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
+}
+
+// Hides raw backend/database errors (e.g. MongoDB "E11000 duplicate key...")
+// from end users, while keeping the original message in the console for debugging.
+function sanitizeErrorMessage(rawMessage) {
+    const looksInternal = /E\d{4,5}|duplicate key|collection:|mongo|stack trace|at\s+\S+\s*\(/i.test(rawMessage);
+
+    if (looksInternal) {
+        console.error('Server returned an internal error:', rawMessage);
+        return 'Something went wrong on our end. Please try again in a moment, or contact support if the issue persists.';
+    }
+
+    return rawMessage;
 }
 
 function showMessage(message, type) {
