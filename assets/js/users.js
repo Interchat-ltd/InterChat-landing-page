@@ -69,11 +69,11 @@ async function loadUsers() {
         } else {
             // Fallback: Use mock data if API is not available
             console.warn('API not available, using mock data');
-            allUsers = getMockUsers();
+            allUsers = USERS_API_CONFIG();
         }
     } catch (error) {
         console.warn('Failed to fetch from API, using mock data:', error.message);
-        allUsers = getMockUsers();
+        allUsers = USERS_API_CONFIG();
     }
 
     if (allUsers.length === 0) {
