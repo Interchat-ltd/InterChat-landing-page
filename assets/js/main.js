@@ -166,4 +166,45 @@ sr.reveal(`.support__card-container` , { delay: 800 , origin: 'bottom' , reset: 
 
 
 
+/*=============== STORE BUTTONS: COMING SOON MODAL ===============*/
+const storeButtons = document.querySelectorAll('.store-button');
+
+if (storeButtons.length) {
+    const storeModalOverlay = document.createElement('div');
+    storeModalOverlay.className = 'store-modal-overlay';
+    storeModalOverlay.innerHTML = `
+        <div class="store-modal" role="dialog" aria-modal="true" aria-labelledby="storeModalTitle">
+            <button type="button" class="store-modal__close" aria-label="Close">&times;</button>
+            <div class="store-modal__icon"><i class='bx bx-time-five'></i></div>
+            <h3 class="store-modal__title" id="storeModalTitle">Coming Soon</h3>
+            <p class="store-modal__text">InterChat isn't available on the App Store or Google Play just yet. We're putting the finishing touches on it — check back soon!</p>
+            <button type="button" class="button store-modal__button">Got it</button>
+        </div>
+    `;
+    document.body.appendChild(storeModalOverlay);
+
+    const closeStoreModal = () => storeModalOverlay.classList.remove('show-modal');
+
+    storeButtons.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            storeModalOverlay.classList.add('show-modal');
+        });
+    });
+
+    storeModalOverlay.querySelector('.store-modal__close').addEventListener('click', closeStoreModal);
+    storeModalOverlay.querySelector('.store-modal__button').addEventListener('click', closeStoreModal);
+
+    // Close when clicking the dark backdrop (not the modal card itself)
+    storeModalOverlay.addEventListener('click', (e) => {
+        if (e.target === storeModalOverlay) closeStoreModal();
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeStoreModal();
+    });
+}
+
+
 /*=============== Delete user info ===============*/

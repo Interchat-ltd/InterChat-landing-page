@@ -457,6 +457,101 @@ svg {
 }
 
 
+/*=============== COMING SOON MODAL ===============*/
+.store-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.store-modal-overlay.show-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.store-modal {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  background: var(--container-color);
+  border-radius: 1.25rem;
+  padding: 2.25rem 1.75rem 1.75rem;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 40px 0px;
+  transform: translateY(20px) scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.store-modal-overlay.show-modal .store-modal {
+  transform: translateY(0) scale(1);
+}
+
+.store-modal__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  color: var(--text-color-light);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.store-modal__close:hover {
+  background-color: hsl(0, 0%, 94%);
+  color: var(--title-color);
+}
+
+.store-modal__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: hsl(var(--hue), 87%, 96%);
+  color: var(--first-color);
+  font-size: 1.75rem;
+}
+
+.store-modal__title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+  margin-bottom: 0.5rem;
+}
+
+.store-modal__text {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  margin-bottom: 1.5rem;
+}
+
+.store-modal__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 
 /*=============== FEATURES ===============*/
 
@@ -1248,6 +1343,7 @@ svg {
     width: 120px; /* Adjust size as needed */
     height: 120px;
     transition: transform 1s ease, top 1s ease, left 1s ease; /* Smooth animation */
+    pointer-events: none; /* Decorative only - never block clicks on elements beneath */
   }
   .home__bitmoji {
     display: inline-block;
@@ -1256,8 +1352,10 @@ svg {
     width: 100%;
     height: 550px; /* Adjust height as needed */
     overflow: visible;
+    z-index: 1;
+    pointer-events: none; /* Let clicks pass through to the store buttons below */
   }
-  
+
   .home__bitmoji-left,
   .home__bitmoji-right {
     position: absolute; /* Make the containers absolute */
@@ -1268,7 +1366,7 @@ svg {
   .home__bitmoji-left {
     left: 0; /* Position the left container on the left */
   }
-  
+
   .home__bitmoji-right {
     right: 0; /* Position the right container on the right */
   }
@@ -1280,6 +1378,8 @@ svg {
     grid-template-columns: repeat(2, 180px);
     gap: 1rem;
     justify-content: center;
+    position: relative;
+    z-index: 10;
   }
 
 
