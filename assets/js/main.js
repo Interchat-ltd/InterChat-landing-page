@@ -34,6 +34,16 @@ function linkAction(){
 
 navLink.forEach(n =>n.addEventListener('click', linkAction))
 
+/*=============== ACTIVE NAV LINK ===============*/
+const currentPage = location.pathname.split('/').pop() || 'index.html';
+
+document.querySelectorAll('.nav__link').forEach((link) => {
+    const linkPage = link.getAttribute('href').split('/').pop();
+    if (linkPage === currentPage) {
+        link.classList.add('active-link');
+    }
+});
+
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 function scrollHeader(){
     const header = document.getElementById('header')
@@ -60,6 +70,34 @@ const scrollUp = () =>{
 window.addEventListener('scroll',scrollUp)
 
 
+
+/*=============== VERSE OF THE DAY ===============*/
+const verseTextEl = document.getElementById('verseText');
+const verseRefEl = document.getElementById('verseRef');
+
+if (verseTextEl && verseRefEl) {
+    const verses = [
+        { text: 'For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.', ref: 'John 3:16' },
+        { text: 'I can do all things through Christ which strengtheneth me.', ref: 'Philippians 4:13' },
+        { text: 'The LORD is my shepherd; I shall not want.', ref: 'Psalm 23:1' },
+        { text: 'For I know the thoughts that I think toward you, saith the LORD, thoughts of peace, and not of evil, to give you an expected end.', ref: 'Jeremiah 29:11' },
+        { text: 'Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.', ref: 'Proverbs 3:5-6' },
+        { text: 'And we know that all things work together for good to them that love God, to them who are the called according to his purpose.', ref: 'Romans 8:28' },
+        { text: 'Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest.', ref: 'Joshua 1:9' },
+        { text: 'Come unto me, all ye that labour and are heavy laden, and I will give you rest.', ref: 'Matthew 11:28' },
+        { text: 'Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee.', ref: 'Isaiah 41:10' },
+        { text: 'Now faith is the substance of things hoped for, the evidence of things not seen.', ref: 'Hebrews 11:1' },
+        { text: 'For where two or three are gathered together in my name, there am I in the midst of them.', ref: 'Matthew 18:20' },
+        { text: 'Behold, how good and how pleasant it is for brethren to dwell together in unity!', ref: 'Psalm 133:1' },
+    ];
+
+    const startOfYear = new Date(new Date().getFullYear(), 0, 0);
+    const dayOfYear = Math.floor((new Date() - startOfYear) / 86400000);
+    const todaysVerse = verses[dayOfYear % verses.length];
+
+    verseTextEl.textContent = `"${todaysVerse.text}"`;
+    verseRefEl.textContent = `— ${todaysVerse.ref}`;
+}
 
 
 /*=============== Animations ===============*/
@@ -147,6 +185,9 @@ const sr = ScrollReveal({
 sr.reveal(`.home__data`, {origin: 'top'});
 sr.reveal(`.home__img` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
 sr.reveal(`.home__info-title` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
+sr.reveal(`.verse-of-day` , { delay: 500 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
+sr.reveal(`.about__heading` , { delay: 300 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
+sr.reveal(`.about__card` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn', interval: 150 });
 sr.reveal(`.feature__heading` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
 sr.reveal(`.feature__data` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
 sr.reveal(`.feature__image-container` , { delay: 600 , origin: 'bottom' , reset: true, animation: 'fadeIn' });

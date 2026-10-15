@@ -26,9 +26,9 @@
             <!--=============== HEADER ===============-->
             <header class="header" id="header">
                 <nav class="nav container">
-                    <div class="nav__logo">
+                    <a href="/index.html" class="nav__logo">
                         <img src="assets/img/Logo+text.png" class="nav__logo-img" alt="InterChat Logo">
-                    </div>
+                    </a>
 
                     <div class="nav__menu" id="nav-menu">
                         <ul class="nav__list">
@@ -44,18 +44,18 @@
                         </ul>
 
                         <!--=============== NAV TOGGLE ===============-->
-                        <div class="nav__close" id="nav-close">
+                        <div class="nav__close" id="nav-close" aria-label="Close menu">
                             <i class="bx bx-x"></i>
                         </div>
                     </div>
 
                     <div class="nav__btn">
                         <!--=============== NAV TOGGLE ===============-->
-                        <div class="nav__toggle" id="nav-toggle">
+                        <div class="nav__toggle" id="nav-toggle" aria-label="Open menu">
                             <i class="bx bx-grid-alt"></i>
                         </div>
 
-                        <a class="button nav__button" id="nav__button">Download</a>
+                        <a href="#" class="button nav__button store-button" id="nav__button">Download</a>
 
                     </div>
                 </nav>
@@ -78,9 +78,12 @@
                             Join a thriving <span>Christian community! </span>Chat, share, and grow spiritually with believers worldwide.
                         </p>
 
-                        <!-- Add this below the "Join the waitlist" button -->
+                        <div class="home__highlights">
+                            <span class="home__highlight"><i class='bx bx-book-bookmark'></i> Daily Devotionals</span>
+                            <span class="home__highlight"><i class='bx bx-heart'></i> Prayer Groups</span>
+                            <span class="home__highlight"><i class='bx bx-chat'></i> Faith-based Chat</span>
+                        </div>
 
-                        <!-- Add this below the "Join the waitlist" button -->
                         <div class="store__button-container grid">
                             <a href="https://apps.apple.com" target="_blank" class="store-button">
                                 <img src="assets/img/Apple.png" alt="Download on the App Store" class="store-button-img">
@@ -111,17 +114,66 @@
 
                     <div class="home__info">
                         <h4 class="home__info-title">
-                            <span class="brand">InterChat</span> exists to foster meaningful 
-                            faith-based connections through prayer, conversation, scripture, and community. 
+                            <span class="brand">InterChat</span> exists to foster meaningful
+                            faith-based connections through prayer, conversation, scripture, and community.
                             <br>
                             <br>
                             Empowering Christians to live out their beliefs daily through technology.
                         </h4>
                     </div>
-                    
+
+                    <div class="verse-of-day" id="verseOfDay">
+                        <div class="verse-of-day__icon"><i class='bx bxs-quote-alt-left'></i></div>
+                        <p class="verse-of-day__text" id="verseText">Loading today's verse&hellip;</p>
+                        <p class="verse-of-day__ref" id="verseRef"></p>
+                        <span class="verse-of-day__label">Verse of the Day &middot; KJV</span>
+                    </div>
 
                 </div>
 
+            </section>
+
+
+            <!--==================== About ====================-->
+            <section class="about section" id="about">
+                <div class="about__container container grid">
+                    <div class="about__heading grid">
+                        <span class="section__subtitle">Why InterChat</span>
+                        <h2 class="about__title">More Than an App — A Movement of Faith</h2>
+                        <p class="about__description">
+                            Three words shape everything we build. Here's what each one means for you.
+                        </p>
+                    </div>
+
+                    <div class="about__cards grid">
+                        <article class="about__card">
+                            <div class="about__card-icon"><i class='bx bx-book-open'></i></div>
+                            <h3 class="about__card-title">Faith</h3>
+                            <p class="about__card-text">
+                                Daily scripture, devotionals, and guided prayer keep God at the center
+                                of your everyday life — not just Sunday mornings.
+                            </p>
+                        </article>
+
+                        <article class="about__card">
+                            <div class="about__card-icon"><i class='bx bx-group'></i></div>
+                            <h3 class="about__card-title">Fellowship</h3>
+                            <p class="about__card-text">
+                                Join prayer groups, share testimonies, and walk alongside believers
+                                who encourage you to keep growing in your walk with God.
+                            </p>
+                        </article>
+
+                        <article class="about__card">
+                            <div class="about__card-icon"><i class='bx bx-globe'></i></div>
+                            <h3 class="about__card-title">Connection</h3>
+                            <p class="about__card-text">
+                                Faith has no borders. Chat with believers across the world and build
+                                friendships rooted in shared purpose, wherever you are.
+                            </p>
+                        </article>
+                    </div>
+                </div>
             </section>
 
 
@@ -263,11 +315,11 @@
 
                                     <div class="testimonial__meta">
                                         <div class="testimonial__avatar">
-                                            <img src="assets/img/1.png" alt="Annette Black">
+                                            <img src="assets/img/1.png" alt="Sarah Mensah">
                                         </div>
                                         <div class="testimonial__info">
-                                            <div class="testimonial__name">Annette Black</div>
-                                            <div class="testimonial__role">Real Estate Investor at <span class="testimonial__company">Johnson Properties</span></div>
+                                            <div class="testimonial__name">Sarah Mensah</div>
+                                            <div class="testimonial__role">Worship Leader at <span class="testimonial__company">New Hope Chapel</span></div>
                                         </div>
                                     </div>
                             </article>
@@ -277,11 +329,11 @@
 
                                     <div class="testimonial__meta">
                                         <div class="testimonial__avatar">
-                                            <img src="assets/img/2.png" alt="Annette Black">
+                                            <img src="assets/img/2.png" alt="David Okafor">
                                         </div>
                                         <div class="testimonial__info">
-                                            <div class="testimonial__name">Annette Black</div>
-                                            <div class="testimonial__role">Real Estate Investor at <span class="testimonial__company">Johnson Properties</span></div>
+                                            <div class="testimonial__name">David Okafor</div>
+                                            <div class="testimonial__role">Bible Study Leader</div>
                                         </div>
                                     </div>
                             </article>
@@ -291,11 +343,25 @@
 
                                     <div class="testimonial__meta">
                                         <div class="testimonial__avatar">
-                                            <img src="assets/img/3.png" alt="Michael Peters">
+                                            <img src="assets/img/3.png" alt="Michael Reyes">
                                         </div>
                                         <div class="testimonial__info">
-                                            <div class="testimonial__name">Michael Peters</div>
+                                            <div class="testimonial__name">Michael Reyes</div>
                                             <div class="testimonial__role">Youth Pastor at <span class="testimonial__company">Hillside Church</span></div>
+                                        </div>
+                                    </div>
+                            </article>
+
+                            <article class="testimonial__card swiper-slide">
+                                    <p class="testimonial__text">Being away at college made it hard to stay rooted in my faith. InterChat gave me a community that feels like home.</p>
+
+                                    <div class="testimonial__meta">
+                                        <div class="testimonial__avatar">
+                                            <img src="assets/img/4.png" alt="Grace Thompson">
+                                        </div>
+                                        <div class="testimonial__info">
+                                            <div class="testimonial__name">Grace Thompson</div>
+                                            <div class="testimonial__role">College Student</div>
                                         </div>
                                     </div>
                             </article>
