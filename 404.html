@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Open in InterChat</title>
+        <meta name="description" content="Connect, pray and grow with believers on InterChat.">
+        <meta name="robots" content="noindex">
+        <meta property="og:site_name" content="InterChat">
+        <meta property="og:title" content="You're invited to InterChat">
+        <meta property="og:description" content="Join a community, connect with believers and pray together on InterChat.">
+        <meta property="og:image" content="https://interchathq.com/assets/img/logomain.png">
+        <meta name="twitter:card" content="summary">
+        <link rel="shortcut icon" href="/assets/img/logomain.png" type="image/x-icon">
+        <link rel="stylesheet" href="/assets/css/links.css">
+    </head>
+
+    <body>
+        <!--
+            This page does two jobs on GitHub Pages:
+            1. Shared app links (interchathq.com/join/<code>, /profile/<username>,
+               /prayer-room/<groupId>, /group/<id>, /chat/<id>, /story/<id>) have no
+               file of their own, so GitHub serves this page. links.js reads the
+               address and shows "Open in InterChat" and the store buttons.
+            2. Any other missing page shows a normal "Page not found".
+            When the app is installed and the domain is verified (.well-known/),
+            phones open these links straight in the app and never reach this page.
+        -->
+        <main class="link" id="main">
+            <a href="/index.html" class="link__brand">
+                <img src="/assets/img/Logo+text.png" alt="InterChat home" class="link__logo">
+            </a>
+
+            <section class="link__card" id="card" aria-live="polite">
+                <div class="link__icon" id="icon" aria-hidden="true">🙏</div>
+                <p class="link__eyebrow" id="eyebrow">InterChat</p>
+                <h1 class="link__title" id="title">Opening InterChat…</h1>
+                <p class="link__text" id="text"></p>
+
+                <div class="link__code" id="code-box" hidden>
+                    <span class="link__code-label">Invite code</span>
+                    <span class="link__code-value" id="code-value"></span>
+                    <button type="button" class="link__copy" id="copy-btn">Copy</button>
+                </div>
+
+                <div class="link__actions" id="actions">
+                    <a class="link__button link__button--primary" id="open-btn" href="#">Open in InterChat</a>
+                </div>
+
+                <div class="link__stores" id="stores">
+                    <p class="link__stores-title" id="stores-title">Don't have InterChat yet?</p>
+                    <div class="link__store-row">
+                        <a id="play-link" class="link__store" href="#" rel="noopener">
+                            <img src="/assets/img/Google.png" alt="Get it on Google Play">
+                        </a>
+                        <a id="ios-link" class="link__store" href="#" rel="noopener">
+                            <img src="/assets/img/Apple.png" alt="Download on the App Store">
+                        </a>
+                    </div>
+                    <p class="link__hint" id="hint"></p>
+                </div>
+            </section>
+
+            <nav class="link__footer" aria-label="Footer">
+                <a href="/index.html">Home</a>
+                <a href="/help.html">Help</a>
+                <a href="/guidelines.html">Community Guidelines</a>
+                <a href="/privacy.html">Privacy</a>
+                <a href="/terms.html">Terms</a>
+            </nav>
+        </main>
+
+        <noscript>
+            <p class="link__noscript">To open this link, install InterChat from Google Play or the App Store, then tap the link again.</p>
+        </noscript>
+
+        <script src="/assets/js/links.js"></script>
+    </body>
+</html>

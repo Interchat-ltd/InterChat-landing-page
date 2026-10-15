@@ -1,0 +1,169 @@
+/*=============== SHARED LINK PAGE (404.html) ===============*/
+@import url('/assets/css/general-sans.css');
+
+:root {
+  --hue: 277;
+  --first-color: hsl(var(--hue), 87%, 53%);
+  --title-color: hsl(0, 0%, 20%);
+  --text-color: hsl(0, 0%, 36%);
+  --body-color: hsl(276, 100%, 98%);
+  --card-color: hsl(0, 0%, 100%);
+  --border-color: hsl(0, 0%, 90%);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  min-height: 100vh;
+  background: var(--body-color);
+  color: var(--text-color);
+  font-family: 'General Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.link {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px 32px;
+  gap: 24px;
+}
+
+.link__brand { align-self: center; }
+.link__logo { height: 36px; width: auto; display: block; }
+
+.link__card {
+  width: 100%;
+  max-width: 440px;
+  background: var(--card-color);
+  border-radius: 24px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 12px 40px hsla(var(--hue), 60%, 40%, .10);
+}
+
+.link__icon { font-size: 44px; line-height: 1; margin-bottom: 16px; }
+
+.link__eyebrow {
+  color: var(--first-color);
+  font-weight: 600;
+  font-size: .8125rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.link__title {
+  color: var(--title-color);
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-bottom: 12px;
+  overflow-wrap: anywhere;
+}
+
+.link__text { margin-bottom: 24px; }
+
+.link__code {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px dashed var(--border-color);
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+.link__code[hidden] { display: none; }
+.link__code-label { font-size: .8125rem; }
+.link__code-value {
+  flex: 1;
+  color: var(--title-color);
+  font-weight: 600;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  overflow-wrap: anywhere;
+}
+
+.link__copy {
+  min-height: 44px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--card-color);
+  color: var(--first-color);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.link__actions { display: grid; gap: 12px; margin-bottom: 24px; }
+
+.link__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 20px;
+  border-radius: 14px;
+  border: 1px solid var(--border-color);
+  background: var(--card-color);
+  color: var(--title-color);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+.link__button[hidden] { display: none; }
+
+.link__button--primary {
+  background: var(--first-color);
+  border-color: var(--first-color);
+  color: #fff;
+}
+
+.link__button:focus-visible,
+.link__copy:focus-visible,
+.link__store:focus-visible,
+.link__footer a:focus-visible {
+  outline: 3px solid var(--first-color);
+  outline-offset: 3px;
+}
+
+.link__stores { border-top: 1px solid var(--border-color); padding-top: 20px; }
+.link__stores-title { color: var(--title-color); font-weight: 600; margin-bottom: 12px; }
+
+.link__store-row { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+
+.link__store { position: relative; display: inline-block; }
+.link__store[hidden] { display: none; }
+.link__store img { height: 48px; width: auto; display: block; }
+.link__store--soon img { opacity: .45; }
+.link__soon {
+  position: absolute;
+  inset: auto 0 -20px;
+  font-size: .75rem;
+  white-space: nowrap;
+}
+
+.link__hint { font-size: .875rem; margin-top: 28px; }
+
+.link__footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 16px;
+  font-size: .875rem;
+}
+.link__footer a { color: var(--text-color); }
+
+.link__noscript { text-align: center; padding: 16px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .link__button, .link__copy { transition: transform .12s ease; }
+  .link__button:active, .link__copy:active { transform: scale(.98); }
+}

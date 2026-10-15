@@ -18,8 +18,10 @@
 
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="/assets/css/delete-user.css">
+        <link rel="stylesheet" href="/assets/css/legal.css">
 
-        <title>Delete users | InterChat</title>
+        <title>Delete your account | InterChat</title>
+        <meta name="description" content="How to delete your InterChat account and what happens to your data.">
     </head>
 
     <body>
@@ -71,23 +73,18 @@
                         <h4 class="delete__title">Delete Account?</h4>
 
                         <p class="delete__description">
-                            We're sorry to see you go. This action cannot be undone 
-                            and all your data will be permanently removed.
+                            We're sorry to see you go. Deleting your account is immediate and can't be undone.
                         </p>
                     </div>
 
-
-
                     <div class="alert-box">
-                                <h2 class="alert__title">Important:</h2>
-
-                                <ul class="alert__list">
-                                    <li class="alert__item">Your profile may be permanently removed.</li>
-                                    <li class="alert__item">Your messages and content may no longer be accessible.</li>
-                                    <li class="alert__item">This action may be irreversible.</li>
-                                </ul>
+                        <h2 class="alert__title">Before you continue:</h2>
+                        <ul class="alert__list">
+                            <li class="alert__item">Your profile, connections, community memberships, stories and streaks are deleted straight away.</li>
+                            <li class="alert__item">Messages you sent stay in other people's chats, without your profile.</li>
+                            <li class="alert__item">Deleting your account doesn't cancel InterChat Plus. Cancel it in your App Store or Google Play settings first.</li>
+                        </ul>
                     </div>
-
 
                     <div class="form__data">
                         <!-- STEP 1: Email Input -->
@@ -95,7 +92,7 @@
                             <h3 class="form__heading">Email Address</h3>
                             <p class="step-info">Enter your InterChat email to request account deletion. You'll receive a verification code.</p>
 
-                            <input type="email" id="email" placeholder="Enter your InterChat email">
+                            <input type="email" id="email" aria-label="Email address" placeholder="Enter your InterChat email" autocomplete="email">
 
                             <div class="action__container grid">
                                 <button class="delete__button" id="requestBtn">
@@ -117,7 +114,7 @@
                                 <p>Code sent to: <strong id="confirmEmail"></strong></p>
                             </div>
 
-                            <input type="text" id="token" placeholder="Enter verification code" maxlength="6">
+                            <input type="text" id="token" aria-label="Verification code" placeholder="Enter the verification code" maxlength="6" autocomplete="one-time-code">
 
                             <div class="action__container grid">
                                 <button class="delete__button" id="confirmBtn">
@@ -130,8 +127,75 @@
                             </div>
                         </div>
 
-                        <div class="form__response" id="response"></div>
+                        <div class="form__response" id="response" role="status" aria-live="polite"></div>
                     </div>
+                </div>
+
+                <!-- DELETE-INFO-BOTTOM:START -->
+<div class="legal delete-info"><div class="privacy__content grid">
+<div class="privacy__section"><p class="privacy__text">You can delete your InterChat account at any time. This page explains how, and what happens to your information.</p></div>
+<div class="privacy__section" id="in-the-app-quickest"><h2 class="privacy__subtitle">In the app (quickest)</h2><ol class="legal__olist">
+<li>Open InterChat and go to <strong>Profile → Settings</strong>.</li>
+<li>Tap <strong>Account → Delete account</strong>.</li>
+<li>Read the summary, confirm with your password (or the code we email you if you signed in with Google, Facebook or Apple), and tap <strong>Delete account</strong>.</li>
+</ol></div>
+<div class="privacy__section" id="on-this-page"><h2 class="privacy__subtitle">On this page</h2><p class="privacy__text">If you no longer have the app or can't sign in:</p>
+<ol class="legal__olist">
+<li>Enter the email address on your account in the form above and tap <strong>Request Deletion</strong>.</li>
+<li>We'll email you a 6-digit code.</li>
+<li>Enter the code and tap <strong>Confirm Deletion</strong>.</li>
+</ol>
+<p class="privacy__text">If you no longer have access to that email address, contact <a href="mailto:support@interchathq.com">support@interchathq.com</a>.</p></div>
+<div class="privacy__section" id="before-you-delete"><h2 class="privacy__subtitle">Before you delete</h2><ul class="privacy__list">
+<li><strong>InterChat Plus:</strong> deleting your account doesn't cancel your subscription. Cancel it first in your App Store or Google Play subscription settings.</li>
+<li><strong>Communities you lead:</strong> another admin takes over, and the community continues. If you're the only admin, a member will be made admin.</li>
+<li><strong>Want a copy of your information?</strong> Email <a href="mailto:privacy@interchathq.com">privacy@interchathq.com</a> before deleting.</li>
+</ul></div>
+<div class="privacy__section" id="what-gets-deleted"><h2 class="privacy__subtitle">What gets deleted</h2><p class="privacy__text">Deletion is <strong>immediate</strong>. There's no waiting period, and it can't be undone.</p>
+<div class="legal__table"><table>
+<thead>
+<tr>
+<th>Information</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Your account, profile, username, photo, bio and links</td>
+<td>Deleted straight away</td>
+</tr>
+<tr>
+<td>Your connections, community memberships, stories and streaks</td>
+<td>Deleted straight away</td>
+</tr>
+<tr>
+<td>Your devices and notification tokens</td>
+<td>Deleted, and you're signed out everywhere</td>
+</tr>
+<tr>
+<td>Your prayer requests and comments</td>
+<td>Deleted</td>
+</tr>
+<tr>
+<td>Messages you sent to others</td>
+<td>Stay in their chats, shown without your profile, as they would in any messaging app</td>
+</tr>
+<tr>
+<td>Everything else linked to you</td>
+<td>Deleted, apart from the records listed below</td>
+</tr>
+</tbody>
+</table></div>
+<p class="privacy__text"><strong>What we may keep, and why:</strong></p>
+<ul class="privacy__list">
+<li>Records needed for safety and legal reasons, such as reports about your account or a record of a ban, for as long as needed to keep the community safe and meet our legal duties.</li>
+<li>Subscription and payment records the law requires us to keep.</li>
+<li>Copies in backups, which are overwritten on a rolling basis.</li>
+</ul>
+<p class="privacy__text">Read more in our <a href="privacy.html">Privacy Policy</a>.</p></div>
+<div class="privacy__section" id="need-help"><h2 class="privacy__subtitle">Need help?</h2><p class="privacy__text">Email <a href="mailto:support@interchathq.com">support@interchathq.com</a> and we'll help.</p></div>
+</div></div>
+<!-- DELETE-INFO-BOTTOM:END -->
 
 
             </section>
@@ -150,33 +214,37 @@
             <div class="footer__container container">
                 <div class="footer__top">
                     <div class="footer__brand">
-                        <img src="assets/img/InterChat.png" alt="footer logo" class="footer__logo">
+                        <img src="assets/img/InterChat.png" alt="InterChat" class="footer__logo">
                     </div>
 
-                    <nav class="footer__nav">
+                    <nav class="footer__nav" aria-label="Footer">
                         <a href="/index.html" class="footer__nav-link">Home</a>
                         <a href="/features.html" class="footer__nav-link">Features</a>
-                        <a href="/about.html" class="footer__nav-link">About</a>
+                        <a href="/index.html#about" class="footer__nav-link">About</a>
+                        <a href="/help.html" class="footer__nav-link">Help</a>
+                        <a href="/guidelines.html" class="footer__nav-link">Guidelines</a>
                         <a href="/privacy.html" class="footer__nav-link">Privacy</a>
                         <a href="/terms.html" class="footer__nav-link">Terms</a>
+                        <a href="/child-safety.html" class="footer__nav-link">Child safety</a>
+                        <a href="/delete__user.html" class="footer__nav-link">Delete account</a>
                     </nav>
 
                     <div class="footer__social">
                         <p class="footer__social-text">Socials</p>
-                        <a href="#" class="footer__social-link"><i class='bx bxl-facebook'></i></a>
-                        <a href="#" class="footer__social-link"><i class='bx bxl-twitter'></i></a>
-                        <a href="#" class="footer__social-link"><i class='bx bxl-instagram'></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="footer__social-link" aria-label="X (Twitter)"><i class='bx bxl-twitter'></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
                     </div>
                 </div>
 
                 <div class="line"></div>
 
                 <div class="footer__watermark">
-                    <img src="assets/img/Footer-logo-blur.png" class="footer__watermark-img" alt="Watermark">
+                    <img src="assets/img/Footer-logo-blur.png" class="footer__watermark-img" alt="">
                 </div>
 
                 <div class="footer__bottom">
-                    <p class="footer__copy">&copy; 2025 - InterChat. All rights reserved.</p>
+                    <p class="footer__copy">&copy; 2026 - InterChat. All rights reserved. <a href="/cookies.html" class="footer__nav-link">Cookies</a> · <a href="/copyright.html" class="footer__nav-link">Copyright</a></p>
                     <p class="footer__credit">Designed by Jaytech</p>
                 </div>
             </div>

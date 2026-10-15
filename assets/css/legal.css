@@ -1,0 +1,92 @@
+/*=============== LEGAL & HELP PAGES ===============*/
+/* Extends privacy.css for the generated pages (privacy, terms, guidelines,
+   child safety, help, cookies, copyright, delete account info). */
+@import url('/assets/css/privacy.css');
+
+.legal { padding-bottom: var(--mb-3); }
+
+.legal .privacy__container { max-width: 820px; }
+
+.legal .privacy__section { margin-bottom: var(--mb-2); }
+
+.legal h2.privacy__subtitle { margin-top: var(--mb-2-5, 2.5rem); }
+
+.legal__h3 {
+  font-size: var(--normal-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  margin: var(--mb-1-5) 0 var(--mb-0-75);
+}
+
+.legal .privacy__text,
+.legal .privacy__list li,
+.legal__olist li,
+.legal__table td,
+.legal__table th { line-height: 1.65; }
+
+.legal__olist {
+  margin: 0 0 var(--mb-1-5) var(--mb-1-5);
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+}
+
+.legal__olist li { margin-bottom: var(--mb-0-75); padding-left: .25rem; }
+
+.legal .privacy__list ul,
+.legal .privacy__list ol { margin-top: var(--mb-0-75); }
+
+.legal a { color: var(--first-color); text-decoration: underline; text-underline-offset: 2px; }
+.legal a:focus-visible { outline: 3px solid var(--first-color); outline-offset: 2px; border-radius: 2px; }
+
+.legal strong { color: var(--title-color); font-weight: var(--font-semi-bold); }
+
+/* "In short" summaries and quotes reuse the contact box style */
+.legal blockquote.privacy__contact { margin: var(--mb-1-5) 0; }
+.legal blockquote.privacy__contact ul { margin: var(--mb-0-5) 0 0; }
+
+.legal__table {
+  width: 100%;
+  overflow-x: auto;
+  margin: var(--mb-1) 0 var(--mb-1-5);
+  -webkit-overflow-scrolling: touch;
+}
+
+.legal__table table {
+  width: 100%;
+  min-width: 480px;
+  border-collapse: collapse;
+  font-size: var(--small-font-size);
+}
+
+.legal__table th,
+.legal__table td {
+  text-align: left;
+  vertical-align: top;
+  padding: .75rem .875rem;
+  border-bottom: 1px solid hsl(0, 0%, 90%);
+  color: var(--text-color);
+}
+
+.legal__table th {
+  background-color: var(--body-color);
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.legal hr { border: 0; border-top: 1px solid hsl(0, 0%, 90%); margin: var(--mb-2) 0; }
+
+.legal__toc {
+  background-color: var(--body-color);
+  border-radius: .75rem;
+  padding: var(--mb-1) var(--mb-1-5);
+  margin-bottom: var(--mb-2);
+  font-size: var(--small-font-size);
+}
+.legal__toc p { margin-bottom: .5rem; color: var(--title-color); font-weight: var(--font-semi-bold); }
+.legal__toc ol { margin-left: 1.25rem; }
+.legal__toc li { margin-bottom: .25rem; }
+
+/* Delete account page: info under the form */
+.delete-info { max-width: 820px; margin: var(--mb-2) auto 0; padding: 0 var(--mb-1); }
+
+.legal__toc ul { list-style: none; margin-left: 0; }

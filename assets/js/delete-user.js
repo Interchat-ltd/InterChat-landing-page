@@ -2,7 +2,7 @@
 
 // ========== API Configuration ==========
 const API_CONFIG = {
-    BASE_URL: 'https://api.staging.interchathq.com',
+    BASE_URL: 'https://api.interchathq.com', // production API (staging: https://api.staging.interchathq.com)
     ENDPOINTS: {
         REQUEST_DELETION: '/api/v1/delete-account/request',
         CONFIRM_DELETION: '/api/v1/delete-account/confirm'

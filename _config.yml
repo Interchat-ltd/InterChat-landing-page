@@ -1,0 +1,13 @@
+# GitHub Pages (Jekyll) settings for interchathq.com
+# - Publish the .well-known folder (app links for Android and iPhone).
+# - Keep working notes and Markdown sources off the public site.
+include:
+  - .well-known
+exclude:
+  - legal-src
+  - README.md
+  - SETUP-LINKS.md
+  - DELETE_ACCOUNT_TESTING.md
+  - DELETE_USER_GUIDE.md
+  - INTEGRATION_SUMMARY.md
+  - "*.md"
