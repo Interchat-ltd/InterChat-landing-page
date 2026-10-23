@@ -5,9 +5,21 @@
 
 .legal { padding-bottom: var(--mb-3); }
 
-.legal .privacy__container { max-width: 820px; }
+/* .container (styles.css) gives this a fixed margin-inline, not auto, so
+   capping its width here without centering it leaves it stuck to the left
+   with all the leftover space dumped on the right at wide viewports. */
+.legal .privacy__container { max-width: 820px; margin-inline: auto; }
 
 .legal .privacy__section { margin-bottom: var(--mb-2); }
+
+/* A table inside has `min-width: 480px` so its columns stay readable, and
+   `.legal__table` wraps it with `overflow-x: auto` so it scrolls within its
+   own box on narrow screens. But a CSS grid item's default min-width is
+   `auto` (= its content's min size), so without this it refuses to shrink
+   below that table's 480px and forces the section - and the whole page on
+   pages with no `overflow: hidden` ancestor to mask it - wider instead. */
+.legal .privacy__content.grid,
+.legal .privacy__section { min-width: 0; }
 
 .legal h2.privacy__subtitle { margin-top: var(--mb-2-5, 2.5rem); }
 

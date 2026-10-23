@@ -1,0 +1,669 @@
+[
+{
+"title": "What is InterChat?",
+"summary": "A faith-based messaging and community app for connecting, praying and growing together.",
+"keywords": [
+"what is interchat",
+"about",
+"faith app",
+"christian app"
+],
+"category": "Getting started",
+"url": "/help/getting-started/what-is-interchat/",
+"text": "InterChat is a faith-based messaging and community app, built so Christians (and anyone exploring the faith) can connect, pray and grow together. Alongside the chats and group conversations you'd expect from a messaging app, InterChat adds things built specifically for faith life: Chats and communit"
+},
+{
+"title": "Creating an account",
+"summary": "What you need to sign up, and why we ask for your date of birth.",
+"keywords": [
+"sign up",
+"register",
+"create account",
+"age",
+"date of birth",
+"13"
+],
+"category": "Getting started",
+"url": "/help/getting-started/creating-an-account/",
+"text": "Creating an InterChat account takes a couple of minutes. Open the app and tap Sign up . Enter your email address or phone number. Enter the verification code we send you. Enter your date of birth and a few basic details to finish setting up your account. Why we ask for your date of birth. InterChat "
+},
+{
+"title": "Signing in with Google, Facebook or Apple",
+"summary": "Use an account you already have instead of a password.",
+"keywords": [
+"google sign in",
+"facebook login",
+"apple sign in",
+"sso",
+"social login"
+],
+"category": "Getting started",
+"url": "/help/getting-started/social-sign-in/",
+"text": "Instead of creating a password, you can sign in to InterChat with your Google, Facebook or Apple account. On the sign-in screen, choose Continue with Google , Continue with Facebook or Continue with Apple . Confirm the account you want to use. Allow InterChat to receive your name, email address and "
+},
+{
+"title": "Setting up your profile",
+"summary": "Add a photo, bio and the details that help others recognise you.",
+"keywords": [
+"profile",
+"bio",
+"username",
+"photo",
+"interests",
+"bible translation"
+],
+"category": "Getting started",
+"url": "/help/getting-started/setting-up-your-profile/",
+"text": "Your profile is how other believers on InterChat get to know you. You can set up and change these any time from your profile screen: Username — must be unique, and shouldn't be offensive or misleading, or impersonate someone else (including a pastor, church or ministry). Profile photo Bio Gender (or"
+},
+{
+"title": "Finding people you know",
+"summary": "Sync your contacts (optional) or search by name or username.",
+"keywords": [
+"find friends",
+"contact sync",
+"add contacts",
+"search people"
+],
+"category": "Getting started",
+"url": "/help/getting-started/finding-people-you-know/",
+"text": "There are two ways to find people you know on InterChat. Search. Search by name or username at any time — this always works, with no setup needed. Contact sync (optional). Tap Find people you know on the Chats screen and allow contact sync, and InterChat will show you which of your phone's contacts "
+},
+{
+"title": "My verification code isn't arriving",
+"summary": "What to check if the code hasn't come through yet.",
+"keywords": [
+"verification code",
+"otp",
+"code not received",
+"sms code",
+"email code"
+],
+"category": "Account & sign-in",
+"url": "/help/account/verification-code-not-arriving/",
+"text": "If your verification code hasn't arrived: Wait a minute , then tap Resend code . Codes can occasionally take a little while to arrive. Check your spam or junk folder , if you asked for an email code. Check the address is spelled correctly. You can change the email address or phone number right from "
+},
+{
+"title": "I forgot my password",
+"summary": "Reset it from the sign-in screen with a code we email you.",
+"keywords": [
+"forgot password",
+"reset password",
+"can't sign in",
+"lost password"
+],
+"category": "Account & sign-in",
+"url": "/help/account/forgot-password/",
+"text": "You can reset your password yourself, right from the sign-in screen: On the sign-in screen, tap Forgot password? Enter the email address on your account. Enter the 6-digit code we send to that email address. Choose a new password. You'll be signed back in once your new password is set. If you signed"
+},
+{
+"title": "Signing out of other devices",
+"summary": "Lost your phone, or think someone else has got into your account? Sign it out remotely.",
+"keywords": [
+"sign out",
+"lost phone",
+"stolen phone",
+"log out other devices",
+"security"
+],
+"category": "Account & sign-in",
+"url": "/help/account/signing-out-of-other-devices/",
+"text": "If your phone is lost, stolen, or you think someone else has accessed your account, you can sign InterChat out on every other device without needing that phone in hand. On a device you still control, open InterChat. Go to Settings → Where you're signed in . Find the device you want to sign out and r"
+},
+{
+"title": "Deleting your account",
+"summary": "Delete it in the app, or from this website — it's immediate and can't be undone.",
+"keywords": [
+"delete account",
+"close account",
+"remove account",
+"deactivate"
+],
+"category": "Account & sign-in",
+"url": "/help/account/deleting-your-account/",
+"text": "You can delete your InterChat account at any time, either in the app or from our website. In the app (quickest): Go to Profile → Settings . Tap Account → Delete account . Read the summary, confirm with your password (or the code we email you if you signed in with Google, Facebook or Apple), and tap "
+},
+{
+"title": "Sending photos, videos, files and voice notes",
+"summary": "Share more than text in any chat or community.",
+"keywords": [
+"send photo",
+"send video",
+"voice note",
+"voice message",
+"file",
+"attachment"
+],
+"category": "Chats & messages",
+"url": "/help/chats/sending-media/",
+"text": "Alongside text, you can send several kinds of content in any one-to-one chat or community on InterChat: Photos and videos Documents and files Voice notes — press and hold the microphone to record, then release to send Shared verses, quotes, sermons and reading plans as cards Polls , for getting a qu"
+},
+{
+"title": "Deleting a message",
+"summary": "Delete for yourself, or for everyone — and what each one leaves behind.",
+"keywords": [
+"delete message",
+"unsend",
+"delete for everyone",
+"delete for me"
+],
+"category": "Chats & messages",
+"url": "/help/chats/deleting-messages/",
+"text": "You can only delete messages you sent yourself. There are two ways to do it: Delete for me. Removes the message from your own view only. Everyone else in the chat still sees it. Delete for everyone. Removes the message from view for everyone in the chat, straight away. It's worth knowing that a copy"
+},
+{
+"title": "What do the ticks mean?",
+"summary": "Sent, delivered and read — and how to turn off read receipts.",
+"keywords": [
+"ticks",
+"checkmarks",
+"read receipts",
+"delivered",
+"blue ticks"
+],
+"category": "Chats & messages",
+"url": "/help/chats/message-ticks/",
+"text": "The ticks next to your messages show their status: whether a message has been sent, delivered to the other person's device, and read. Read receipts are a setting you control. If you turn read receipts off, you won't see when others have read your messages — and in turn, they won't see when you've re"
+},
+{
+"title": "Muting a chat or community",
+"summary": "Stop the notifications without leaving — @mentions still get through.",
+"keywords": [
+"mute chat",
+"mute notifications",
+"mute community",
+"turn off notifications"
+],
+"category": "Chats & messages",
+"url": "/help/chats/muting-a-chat/",
+"text": "If a chat or community is busy and you need some quiet, you can mute it instead of leaving. Swipe left on the chat or community in your Chats list and tap Mute , or open its info screen and mute it from there. Muting stops routine notifications from that chat, but you'll still be notified if someone"
+},
+{
+"title": "Drafts",
+"summary": "Unsent messages are saved on your phone automatically.",
+"keywords": [
+"draft",
+"unsent message",
+"saved message"
+],
+"category": "Chats & messages",
+"url": "/help/chats/drafts/",
+"text": "If you start typing a message and leave the chat before sending it, InterChat keeps it as a draft so you don't lose your train of thought. Drafts are saved only on your phone — they're never sent to InterChat's servers, so they don't appear if you sign in on another device. Deleting the app will rem"
+},
+{
+"title": "Replying, reacting and @mentions",
+"summary": "Respond to a specific message without losing the thread.",
+"keywords": [
+"reply",
+"react",
+"reaction",
+"mention",
+"@mention"
+],
+"category": "Chats & messages",
+"url": "/help/chats/replying-and-reacting/",
+"text": "In a busy chat or community, it helps to respond to a specific message rather than just adding a new one at the bottom. Reply to a message to quote it, so it's clear what you're responding to. React to a message with an emoji — a quick way to say you saw it, agree, or send encouragement without writ"
+},
+{
+"title": "Joining a community",
+"summary": "Browse Discover, use an invite link, or ask to join a private community.",
+"keywords": [
+"join community",
+"discover",
+"invite link",
+"private community",
+"join with a link"
+],
+"category": "Communities",
+"url": "/help/communities/joining-a-community/",
+"text": "There are a few ways to join a community on InterChat: Browse. Go to Updates → Communities → See all to discover public communities. Use an invite link. Someone shares a link like interchathq.com/join/… with you — opening it on your phone takes you straight to the community's join screen. Ask to joi"
+},
+{
+"title": "Creating a community",
+"summary": "Pick a template, set your privacy, and invite people.",
+"keywords": [
+"create community",
+"new community",
+"template",
+"bible study group"
+],
+"category": "Communities",
+"url": "/help/communities/creating-a-community/",
+"text": "Anyone can create a community on InterChat. Tap the new chat button, then New community . Pick a template to get started quickly — Bible study , Prayer group , Church or Friends — or start from scratch. Set the community's name, photo, description and privacy (public or private). Invite people, eith"
+},
+{
+"title": "Invite links",
+"summary": "Share a link so people can join your community directly.",
+"keywords": [
+"invite link",
+"share community",
+"join link"
+],
+"category": "Communities",
+"url": "/help/communities/invite-links/",
+"text": "Every community has an invite link you can share — something like interchathq.com/join/… — that takes the person straight to that community's join screen when they open it. Anyone with the link can use it to join (or to request to join, if the community is private). If you'd rather invite someone di"
+},
+{
+"title": "Roles in a community",
+"summary": "Owners, admins and moderators keep a community running well.",
+"keywords": [
+"owner",
+"admin",
+"moderator",
+"roles",
+"permissions"
+],
+"category": "Communities",
+"url": "/help/communities/roles-in-a-community/",
+"text": "Every community is run by the people who create and manage it — its owners , admins and moderators . They're responsible for setting its rules, keeping it welcoming, and acting on problems. Admins can: Add or remove members Choose who can post Pin messages Manage Prayer Rooms Community rules can be "
+},
+{
+"title": "Prayer requests and \"I prayed\"",
+"summary": "Share a need, even anonymously, and let others respond that they've prayed.",
+"keywords": [
+"prayer request",
+"prayer wall",
+"i prayed",
+"anonymous prayer"
+],
+"category": "Communities",
+"url": "/help/communities/prayer-requests/",
+"text": "You can share a prayer request in a community or on the Prayer Wall, and others can respond with \"I prayed\" to let you know they've lifted it up, or post an update once it's answered. Posting anonymously. If you'd rather not share your name, you can post a prayer request anonymously — other members "
+},
+{
+"title": "Polls",
+"summary": "Ask your community a question and see how people vote.",
+"keywords": [
+"poll",
+"vote",
+"survey"
+],
+"category": "Communities",
+"url": "/help/communities/polls/",
+"text": "Polls let you ask a quick question in a chat or community and see how people respond, without everyone needing to reply individually. Like other messages, a poll you send belongs to you, and it stays subject to the same Community Guidelines as any other message in the chat. Polls are a good way to s"
+},
+{
+"title": "Pinned messages",
+"summary": "Admins can pin a message so it stays easy to find.",
+"keywords": [
+"pin message",
+"pinned",
+"announcement"
+],
+"category": "Communities",
+"url": "/help/communities/pinned-messages/",
+"text": "Admins can pin an important message in a community — a meeting time, a welcome note, or anything worth keeping easy to find above the regular flow of chat. Pinning is one of the tools available to a community's owners, admins and moderators as part of running it well. See Roles in a community for th"
+},
+{
+"title": "What is a Prayer Room?",
+"summary": "A live voice gathering inside a community, where members take turns to pray.",
+"keywords": [
+"prayer room",
+"voice prayer",
+"live prayer",
+"what is a prayer room"
+],
+"category": "Prayer Rooms",
+"url": "/help/prayer-rooms/what-is-a-prayer-room/",
+"text": "A Prayer Room is a live voice gathering inside a community, where members can pray together out loud, one at a time. You join a Prayer Room muted, and unmute when it's your turn to pray — see Joining and taking turns for how turns work. Hosts and co-hosts can guide the room, manage who's speaking, a"
+},
+{
+"title": "Joining and taking turns",
+"summary": "You join muted, raise your hand to pray, then unmute when it's your turn.",
+"keywords": [
+"raise hand",
+"unmute",
+"turn to pray",
+"join prayer room"
+],
+"category": "Prayer Rooms",
+"url": "/help/prayer-rooms/joining-and-taking-turns/",
+"text": "When you join a Prayer Room, you join muted by default, so the room stays calm and focused as people arrive. To pray out loud: Raise your hand ✋ to let the host know you'd like to pray. Wait for your turn. Unmute when it's your turn to speak, then mute yourself again once you're done. This keeps pra"
+},
+{
+"title": "For hosts: managing a Prayer Room",
+"summary": "Mute, manage turns, remove someone, or end the room.",
+"keywords": [
+"prayer room host",
+"co-host",
+"mute someone",
+"remove from room",
+"end room"
+],
+"category": "Prayer Rooms",
+"url": "/help/prayer-rooms/host-controls/",
+"text": "If you're hosting a Prayer Room, you and any co-hosts you add have tools to keep it running well: Mute people, including muting everyone at once if the room needs to settle. Manage turns , recognising raised hands ✋ in the order that works for your room. Remove someone from the room, if needed. End "
+},
+{
+"title": "Scheduling a Prayer Room",
+"summary": "Plan one ahead, reply Going or Can't make it, and add it to your calendar.",
+"keywords": [
+"schedule prayer room",
+"reminder",
+"going",
+"can't make it",
+"add to calendar"
+],
+"category": "Prayer Rooms",
+"url": "/help/prayer-rooms/scheduling-and-reminders/",
+"text": "Rather than starting a Prayer Room on the spot, you can schedule one ahead of time so your community knows when to show up. Once a Prayer Room is scheduled, members can reply Going or Can't make it , so the host has a sense of who to expect. You can also Add to calendar , which creates a link like i"
+},
+{
+"title": "Prayer Rooms aren't recorded",
+"summary": "InterChat doesn't record them, and you shouldn't either.",
+"keywords": [
+"recording",
+"privacy",
+"prayer room recording"
+],
+"category": "Prayer Rooms",
+"url": "/help/prayer-rooms/not-recorded/",
+"text": "Prayer Rooms are not recorded by InterChat . They're live voice gatherings, connected through our calling provider, and nothing said in them is stored by us afterwards. We ask the same of everyone using InterChat: please don't record or rebroadcast a Prayer Room without the agreement of everyone pre"
+},
+{
+"title": "How does my prayer streak work?",
+"summary": "Three daily goals keep your streak alive — reading, prayer and the Prayer Wall.",
+"keywords": [
+"prayer streak",
+"daily goals",
+"streak",
+"verse of the day"
+],
+"category": "Prayer, streaks & Bible",
+"url": "/help/prayer-streaks-bible/prayer-streak/",
+"text": "Your prayer streak counts the days you've shown up consistently for your own time with God. A day counts toward your streak when you complete all three of these: Read today's verse (the Verse of the Day). Finish a guided prayer. Pray for someone on the Prayer Wall. All three need to be done on the s"
+},
+{
+"title": "Faith streaks with a friend",
+"summary": "Only shared verses, quotes, sermons, podcasts and reading plans count.",
+"keywords": [
+"faith streak",
+"streak with a friend",
+"shared streak"
+],
+"category": "Prayer, streaks & Bible",
+"url": "/help/prayer-streaks-bible/faith-streak-with-a-friend/",
+"text": "A faith streak is a streak you keep together with one friend, rather than on your own. A day counts toward a faith streak when you both share one of these with each other, as a card, on that day: A verse A quote A sermon A podcast A reading plan What doesn't count: ordinary text messages, photos, vo"
+},
+{
+"title": "Reading the Bible offline",
+"summary": "Chapters you've read are saved for offline reading, where the publisher allows it.",
+"keywords": [
+"offline bible",
+"download bible",
+"read without internet"
+],
+"category": "Prayer, streaks & Bible",
+"url": "/help/prayer-streaks-bible/reading-offline/",
+"text": "InterChat saves the chapters you've recently read on your phone, so you can keep reading them without an internet connection. This works for translations whose publishers allow offline reading — Bible translations on InterChat are licensed from their publishers, and some licences don't permit saving"
+},
+{
+"title": "Listening to audio content",
+"summary": "Audio Bibles, sermons, podcasts and worship music, all inside the app.",
+"keywords": [
+"audio bible",
+"podcast",
+"sermon",
+"worship music",
+"listen"
+],
+"category": "Prayer, streaks & Bible",
+"url": "/help/prayer-streaks-bible/listening-to-audio-content/",
+"text": "Beyond reading, InterChat lets you listen to audio Bibles, sermons, podcasts and worship music, wherever you are. This content is licensed from its publishers for you to listen to inside InterChat. As with text Bible translations, you can listen and share within the app, but you can't copy, download"
+},
+{
+"title": "Posting a story",
+"summary": "Share a text, photo or video story — visible for 24 hours.",
+"keywords": [
+"story",
+"post story",
+"who sees my story",
+"story privacy"
+],
+"category": "Stories",
+"url": "/help/stories/posting-a-story/",
+"text": "A story is a text, photo or video update that's visible to others for a limited time, rather than staying in your profile permanently. Who can see it is controlled by your story privacy settings, the same place you manage who sees your profile photo, bio and last-seen status. You choose the audience"
+},
+{
+"title": "Hiding or reporting someone's stories",
+"summary": "Quietly stop seeing them, or report one that breaks the guidelines.",
+"keywords": [
+"hide stories",
+"mute stories",
+"report story"
+],
+"category": "Stories",
+"url": "/help/stories/hiding-and-reporting-stories/",
+"text": "If you'd rather not see a particular person's stories, you can hide or mute their stories without blocking or unfollowing them outright — they won't know you've done it. If a story breaks InterChat's Community Guidelines — for example, it's harassing, hateful or unsafe — you can report it instead: O"
+},
+{
+"title": "Voice and video calls",
+"summary": "Call someone directly from a chat — needs a working internet connection.",
+"keywords": [
+"voice call",
+"video call",
+"calling",
+"call someone"
+],
+"category": "Calls",
+"url": "/help/calls/voice-and-video-calls/",
+"text": "You can start a voice or video call directly from a chat with someone on InterChat. Calls are connected through our calling provider and need a working internet connection — they'll use mobile data if you're not on Wi-Fi, so it's worth being mindful of your data plan for longer calls. See Using less"
+},
+{
+"title": "I'm not getting notifications",
+"summary": "Four quick checks to get them working again.",
+"keywords": [
+"no notifications",
+"notifications not working",
+"missing notifications"
+],
+"category": "Notifications",
+"url": "/help/notifications/not-getting-notifications/",
+"text": "If notifications have stopped coming through, work through these four checks in order: Check your phone's settings. Make sure notifications are allowed for InterChat in your phone's system settings, not just inside the app. Send a test notification. In the app, open Settings → Notifications and tap "
+},
+{
+"title": "Calls or Prayer Rooms not ringing full screen",
+"summary": "Android 14 full-screen permission, and extra settings on some phones.",
+"keywords": [
+"call not ringing",
+"full screen notification",
+"tecno",
+"infinix",
+"xiaomi",
+"oppo"
+],
+"category": "Notifications",
+"url": "/help/notifications/calls-not-ringing-full-screen/",
+"text": "If a call or Prayer Room doesn't ring with a full-screen alert the way you'd expect, it's usually a phone setting rather than a problem with InterChat. On Android 14 and later: make sure you've allowed Full-screen notifications for InterChat in your phone's settings. Android introduced this as a sep"
+},
+{
+"title": "Quiet hours",
+"summary": "Pause notifications for a set time each day, set on your device.",
+"keywords": [
+"quiet hours",
+"do not disturb",
+"silence notifications"
+],
+"category": "Notifications",
+"url": "/help/notifications/quiet-hours/",
+"text": "Quiet hours let you pause InterChat's notifications for a period you choose, so they don't interrupt you — overnight, for example, or during a set time of day. Quiet hours are a setting kept on your device. When they're on, routine notifications are held back until quiet hours end. If you've set up "
+},
+{
+"title": "Muting with @mention exceptions",
+"summary": "Muted chats stay quiet, except when someone @mentions you directly.",
+"keywords": [
+"mute exception",
+"mention notification",
+"@mention"
+],
+"category": "Notifications",
+"url": "/help/notifications/muting-with-mention-exceptions/",
+"text": "Muting a chat or community stops its routine notifications, but InterChat makes one exception: if someone @mentions you by name, you'll still be notified, even though the rest of the chat is muted. This means you can mute a busy community to cut down the noise, without worrying that you'll miss some"
+},
+{
+"title": "Blocking someone",
+"summary": "Stops them contacting you or seeing your content — and it works both ways.",
+"keywords": [
+"block",
+"blocking",
+"block someone"
+],
+"category": "Privacy & safety",
+"url": "/help/privacy-safety/blocking/",
+"text": "If you'd rather not have any contact with someone on InterChat, you can block them. Open their profile. Tap ⋯ → Block . Blocking works both ways : once you've blocked someone, neither of you can message, call or see each other's profile, stories or activity. Blocking doesn't notify the other person."
+},
+{
+"title": "Reporting and what happens next",
+"summary": "How to report, what we do about it, and how to appeal.",
+"keywords": [
+"report",
+"report abuse",
+"appeal",
+"moderation"
+],
+"category": "Privacy & safety",
+"url": "/help/privacy-safety/reporting/",
+"text": "You can report almost anything on InterChat straight from where you see it: A message: long-press it → Report . A person: open their profile → ⋯ → Report (you can also Block them). A community: Community info → Report community . A story: ⋯ → Report story . A prayer request or comment: ⋮ → Report . "
+},
+{
+"title": "Who can see your profile",
+"summary": "You control your photo, bio, last-seen and stories — your name and username are always visible.",
+"keywords": [
+"profile privacy",
+"who can see my profile",
+"privacy settings"
+],
+"category": "Privacy & safety",
+"url": "/help/privacy-safety/who-can-see-your-profile/",
+"text": "Your username and name are always visible to other InterChat users, so people can find and recognise you. Beyond that, you control who sees: Your profile photo Your bio Your last-seen time Your stories Whether you send read receipts You can change any of these at any time from your privacy settings."
+},
+{
+"title": "Is InterChat end-to-end encrypted?",
+"summary": "No. Messages are encrypted in transit, but not end-to-end.",
+"keywords": [
+"encryption",
+"end to end encrypted",
+"e2ee",
+"is interchat secure"
+],
+"category": "Privacy & safety",
+"url": "/help/privacy-safety/is-interchat-encrypted/",
+"text": "Honestly: no, InterChat is not end-to-end encrypted. Everything sent between the app and our servers is encrypted in transit (TLS), so it's protected from being intercepted on the way. But InterChat's systems do process the content of your messages — to deliver notification previews, power search in"
+},
+{
+"title": "Avoiding scams",
+"summary": "Never send money for \"prayer fees\" or to someone you haven't verified.",
+"keywords": [
+"scam",
+"fraud",
+"prayer fee",
+"fake ministry",
+"money"
+],
+"category": "Privacy & safety",
+"url": "/help/privacy-safety/avoiding-scams/",
+"text": "Sadly, scammers sometimes target faith communities. InterChat has zero tolerance for this, but it helps to know what to watch for. Never send money because of: A fake \"prayer fee\" or \"seed offering\" demanded in exchange for a blessing, healing or miracle. A fake ministry, charity or investment schem"
+},
+{
+"title": "Child safety on InterChat",
+"summary": "Zero tolerance for child exploitation, and how to report it.",
+"keywords": [
+"child safety",
+"csae",
+"report child abuse",
+"protect children"
+],
+"category": "Privacy & safety",
+"url": "/help/privacy-safety/child-safety/",
+"text": "InterChat has zero tolerance for child sexual abuse and exploitation. Protecting children is part of who we are as a faith community. InterChat is for people aged 13 and older, and we delete any account we find belongs to someone under 13. Adults must not seek private, secretive or romantic contact "
+},
+{
+"title": "What's included in InterChat Plus",
+"summary": "An optional paid subscription with extra features, shown in the app when you subscribe.",
+"keywords": [
+"interchat plus",
+"subscription",
+"premium",
+"what's included"
+],
+"category": "InterChat Plus",
+"url": "/help/plus/what-is-included/",
+"text": "InterChat is free to use. InterChat Plus is an optional paid subscription with extra features. The exact features included are shown in the app at the time you subscribe, since they can change — so rather than list them here and risk being out of date, we'd rather point you to the most accurate plac"
+},
+{
+"title": "Cancelling InterChat Plus",
+"summary": "Cancel in the app, or directly in your App Store or Google Play settings.",
+"keywords": [
+"cancel plus",
+"cancel subscription",
+"stop subscription"
+],
+"category": "InterChat Plus",
+"url": "/help/plus/cancelling/",
+"text": "You can cancel InterChat Plus at any time. In the app, go to Settings → InterChat Plus → Manage subscription . This takes you to your App Store or Google Play subscription settings, where you can cancel. You can also cancel directly from your phone's App Store or Google Play subscription settings, w"
+},
+{
+"title": "Restoring InterChat Plus",
+"summary": "Changed phones? Sign in and tap Restore purchases.",
+"keywords": [
+"restore purchases",
+"lost plus",
+"new phone subscription"
+],
+"category": "InterChat Plus",
+"url": "/help/plus/restoring/",
+"text": "If you've changed phones, reinstalled InterChat, or Plus just isn't showing as active, you can restore it without paying again. Sign in with the same account you subscribed with. Open the InterChat Plus screen. Tap Restore purchases . This reconnects your existing subscription from the App Store or "
+},
+{
+"title": "Getting a refund",
+"summary": "Refunds are handled by Apple or Google, not InterChat directly.",
+"keywords": [
+"refund",
+"money back",
+"reportaproblem"
+],
+"category": "InterChat Plus",
+"url": "/help/plus/refunds/",
+"text": "InterChat Plus is billed through the Apple App Store or Google Play, so refunds are handled by them under their own policies, rather than by InterChat directly. On iPhone: request a refund at reportaproblem.apple.com . On Android: request a refund through your Google Play order history. Where the la"
+},
+{
+"title": "The app is slow or not loading",
+"summary": "A few quick things to try before contacting us.",
+"keywords": [
+"app slow",
+"not loading",
+"frozen",
+"stuck",
+"crashing"
+],
+"category": "Troubleshooting",
+"url": "/help/troubleshooting/app-slow-or-not-loading/",
+"text": "If InterChat is running slowly, stuck, or not loading, try these in order: Check your internet connection. Switch between Wi-Fi and mobile data to see if one works better. Close and reopen the app. This clears up most temporary glitches. Restart your phone , if closing the app doesn't help. Check fo"
+},
+{
+"title": "A link didn't open the app",
+"summary": "What happens when you tap an InterChat link, depending on your phone.",
+"keywords": [
+"link not opening app",
+"join link",
+"universal link",
+"app link"
+],
+"category": "Troubleshooting",
+"url": "/help/troubleshooting/link-did-not-open-app/",
+"text": "InterChat links — like an invite ( interchathq.com/join/… ), a profile ( interchathq.com/profile/… ) or a Prayer Room link — are designed to open directly in the app. What actually happens depends on your phone: App installed and verified: the link opens the app directly; the website isn't involved."
+},
+{
+"title": "Using less data",
+"summary": "Calls, Prayer Rooms and media are the biggest users of mobile data.",
+"keywords": [
+"data usage",
+"mobile data",
+"save data",
+"data plan"
+],
+"category": "Troubleshooting",
+"url": "/help/troubleshooting/using-less-data/",
+"text": "If you're mindful of your mobile data plan, the main things to know are: Calls and Prayer Rooms need a working internet connection and will use mobile data if you're not on Wi-Fi — these are usually the heaviest part of your data use on InterChat, especially video calls or longer Prayer Room session"
+}
+]

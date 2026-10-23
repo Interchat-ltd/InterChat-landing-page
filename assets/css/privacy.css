@@ -25,7 +25,7 @@
 
 
 .privacy__title {
-  font-size: var(--biggest-font-size);
+  font-size: var(--h2-font-sizefont-size);
   color: var(--title-color);
   font-weight: var(--font-medium);
 }
@@ -49,7 +49,7 @@
 .privacy__subtitle {
   font-size: var(--h3-font-size);
   color: var(--title-color);
-  font-weight: var(--font-semi-bold);
+  font-weight: var(--font-medium);
   margin-bottom: var(--mb-1);
   display: flex;
   align-items: flex-start;

@@ -35,10 +35,16 @@ function linkAction(){
 navLink.forEach(n =>n.addEventListener('click', linkAction))
 
 /*=============== ACTIVE NAV LINK ===============*/
-const currentPage = location.pathname.split('/').pop() || 'index.html';
+// location.pathname.split('/').pop() returns '' for any directory-style URL
+// (e.g. /help/, /help/account/), not just the real site root '/' - that ''
+// used to fall back to 'index.html' and wrongly highlight Home on every
+// Help Centre page. Only the real root should fall back like that.
+const currentPage = location.pathname === '/'
+    ? 'index.html'
+    : location.pathname.split('/').filter(Boolean).pop() || 'index.html';
 
 document.querySelectorAll('.nav__link').forEach((link) => {
-    const linkPage = link.getAttribute('href').split('/').pop();
+    const linkPage = link.getAttribute('href').split('/').filter(Boolean).pop();
     if (linkPage === currentPage) {
         link.classList.add('active-link');
     }
@@ -139,48 +145,58 @@ setInterval(animateBitmojis, 2000);
 
 
 /*=============== TESTIMONIALS SLIDER ===============*/
-const swiperTestimonial = new Swiper('.testimonials__swiper', {
-  // Optional parameters
-  loop: true,
-  spaceBetween: 24,
-  slidesPerView: 'auto',
-  grabCursor: true,
-  speed: 600,
+// Guarded: if the Swiper CDN script fails to load (offline, blocked, or a
+// page like this one simply doesn't include it because it has no carousel),
+// this used to throw and silently cancel every script below it on the page -
+// the store modal, FAQ accordion, active nav link and fade-up animations.
+if (typeof Swiper !== 'undefined' && document.querySelector('.testimonials__swiper')) {
+    const swiperTestimonial = new Swiper('.testimonials__swiper', {
+      // Optional parameters
+      loop: true,
+      spaceBetween: 24,
+      slidesPerView: 'auto',
+      grabCursor: true,
+      speed: 600,
 
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
- },
-    breakpoints: {
-        1200: {
-          slidesPerView: 2,
-          spaceBetween: 24,
-        }
-    },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+     },
+        breakpoints: {
+            1200: {
+              slidesPerView: 2,
+              spaceBetween: 24,
+            }
+        },
 
 
-  // If we need pagination
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+      // If we need pagination
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
 
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
 
-});
+    });
+}
 
 /*=============== Function to animate the count ===============*/
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '60px',
-    duration: 1500,
-    delay: 300,
-    easing: 'cubic-bezier(0.34, 1.56, 0.64, 1)',
-    reset: true
-});
+// Same guard as Swiper above: fall back to a no-op so a missing/blocked
+// ScrollReveal script can't cancel the rest of this file's event listeners.
+const sr = (typeof ScrollReveal !== 'undefined')
+    ? ScrollReveal({
+        origin: 'top',
+        distance: '60px',
+        duration: 1500,
+        delay: 300,
+        easing: 'cubic-bezier(0.34, 1.56, 0.64, 1)',
+        reset: true
+    })
+    : { reveal: () => {} };
 
 sr.reveal(`.home__data`, {origin: 'top'});
 sr.reveal(`.home__img` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
@@ -192,10 +208,13 @@ sr.reveal(`.feature__heading` , { delay: 400 , origin: 'bottom' , reset: true, a
 sr.reveal(`.feature__data` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
 sr.reveal(`.feature__image-container` , { delay: 600 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
 sr.reveal(`.testimonials__intro` , { delay: 600 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
+sr.reveal(`.faq__heading` , { delay: 300 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
+sr.reveal(`.faq__item` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn', interval: 80 });
 sr.reveal(`.banner__data` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
 sr.reveal(`.banner__result` , { delay: 800 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
 sr.reveal(`.banner__image` , { delay: 400 , origin: 'right' , reset: true, animation: 'fadeIn' });
 sr.reveal(`.footer__top` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
+sr.reveal(`.footer__center` , { delay: 300 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
 sr.reveal(`.footer__watermark` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
 /*==== Contact Scroll Reveal ====*/
 sr.reveal(`.contact__hero` , { delay: 400 , origin: 'bottom' , reset: true, animation: 'fadeIn' });
@@ -245,6 +264,51 @@ if (storeButtons.length) {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeStoreModal();
     });
+}
+
+
+/*=============== FAQ ACCORDION ===============*/
+const faqQuestions = document.querySelectorAll('.faq__question');
+
+faqQuestions.forEach((question) => {
+    question.addEventListener('click', () => {
+        const answer = document.getElementById(question.getAttribute('aria-controls'));
+        const isOpen = question.getAttribute('aria-expanded') === 'true';
+
+        // Close every other item first, so only one is open at a time
+        faqQuestions.forEach((other) => {
+            if (other !== question) {
+                other.setAttribute('aria-expanded', 'false');
+                document.getElementById(other.getAttribute('aria-controls')).hidden = true;
+            }
+        });
+
+        question.setAttribute('aria-expanded', String(!isOpen));
+        answer.hidden = isOpen;
+    });
+});
+
+
+/*=============== FADE-UP ON SCROLL (About page) ===============*/
+const fadeUpElements = document.querySelectorAll('.fade-up');
+
+if (fadeUpElements.length) {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+        fadeUpElements.forEach((el) => el.classList.add('is-visible'));
+    } else {
+        const fadeUpObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+        fadeUpElements.forEach((el) => fadeUpObserver.observe(el));
+    }
 }
 
 

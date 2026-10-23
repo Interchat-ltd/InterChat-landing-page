@@ -90,6 +90,11 @@
 
 html {
   scroll-behavior: smooth;
+  /* position:fixed elements (like the off-canvas mobile menu, parked at
+     right:-100% until opened) are contained by the viewport/html box, not
+     body - so this has to go here, not just on body, to actually stop them
+     adding a few pixels of horizontal scroll while off-screen. */
+  overflow-x: hidden;
 }
 
 input,
@@ -103,6 +108,12 @@ body {
 body {
   background-color: var(--body-color-white);
   color: var(--text-color);
+  /* The mobile nav menu sits off-canvas at right:-100% until opened; that still
+     extends the page's scrollable area in some browsers even while off-screen,
+     causing a few pixels of horizontal scroll on every page. It doesn't need to
+     be reachable by scrolling (.show-menu brings it on-screen instead), so this
+     is the standard, safe fix rather than touching its positioning. */
+  overflow-x: hidden;
 }
 
 input,
@@ -126,6 +137,14 @@ p {
   font-weight: var(--font-regular);
   letter-spacing: -0.3px;
   line-height: 130%;
+}
+
+/* h1-h4 and p above set display explicitly, which (being an author rule)
+   beats the browser's own [hidden] default regardless of specificity - so
+   toggling the hidden attribute on a heading or paragraph anywhere on the
+   site would silently stay visible without this. */
+[hidden] {
+  display: none !important;
 }
 
 ul {
@@ -573,6 +592,9 @@ svg {
 .about__card:nth-child(1){ background: hsl(var(--hue), 68%, 66%); }
 .about__card:nth-child(2){ background: var(--accent-gold); box-shadow: 0 18px 32px -18px hsla(42, 70%, 35%, .55); }
 .about__card:nth-child(3){ background: var(--first-color-alt); }
+/* A 4th card (used on the About page's "What we believe" grid) continues the
+   purple ladder: light (1) -> gold accent (2) -> true brand purple (4) -> deep (3). */
+.about__card:nth-child(4){ background: var(--first-color); }
 
 .about__card:nth-child(2):hover{ box-shadow: 0 28px 46px -18px hsla(42, 70%, 30%, .6); }
 
@@ -653,6 +675,35 @@ svg {
   .about__cards{
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.about__story-link{
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  justify-self: center;
+  margin-top: 1rem;
+  color: var(--first-color);
+  font-weight: var(--font-medium);
+  font-size: var(--small-font-size);
+  min-height: 44px;
+  padding: .5rem;
+}
+
+.about__story-link i{
+  font-size: 1.25rem;
+  transition: transform .3s ease;
+}
+
+.about__story-link:hover i,
+.about__story-link:focus-visible i{
+  transform: translateX(4px);
+}
+
+.about__story-link:focus-visible{
+  outline: 2px solid var(--first-color);
+  outline-offset: 2px;
+  border-radius: .5rem;
 }
 
 
@@ -1118,6 +1169,130 @@ svg {
 
 
 
+/*=============== FAQ ===============*/
+.faq{
+  background-color: var(--body-color);
+}
+
+.faq__container{
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.faq__heading{
+  text-align: center;
+  justify-items: center;
+  gap: .5rem;
+}
+
+.faq__section-title{
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+  max-width: 640px;
+}
+
+.faq__section-description{
+  color: var(--text-color-light);
+  font-size: var(--normal-font-size);
+  max-width: 520px;
+}
+
+.faq__accordion{
+  display: grid;
+  gap: 1rem;
+  max-width: 760px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.faq__item{
+  background-color: var(--container-color);
+  border: 1px solid hsl(0, 0%, 90%);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: border-color .3s ease;
+}
+
+.faq__item:has(.faq__question[aria-expanded="true"]){
+  border-color: var(--first-color);
+}
+
+.faq__item-heading{
+  margin: 0;
+}
+
+.faq__question{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--body-font);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+  min-height: 44px;
+}
+
+.faq__question:focus-visible{
+  outline: 2px solid var(--first-color);
+  outline-offset: -2px;
+  border-radius: .5rem;
+}
+
+.faq__icon{
+  flex-shrink: 0;
+  font-size: 1.25rem;
+  color: var(--first-color);
+  transition: transform .3s ease;
+}
+
+.faq__question[aria-expanded="true"] .faq__icon{
+  transform: rotate(180deg);
+}
+
+.faq__answer{
+  padding: 0 1.5rem 1.25rem;
+}
+
+.faq__answer p{
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
+  line-height: 1.6;
+}
+
+.faq__answer a{
+  color: var(--first-color);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.faq__cta{
+  text-align: center;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.faq__cta-text{
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
+}
+
+@media (prefers-reduced-motion: reduce){
+  .faq__icon,
+  .faq__item{
+    transition: none;
+  }
+}
+
+
 /*=============== BANNER ===============*/
 .banner{
   margin-top: 3rem;
@@ -1186,6 +1361,13 @@ svg {
   width: 100%;
 }
 
+.banner__img{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 
 /*=============== TIMER ===============*/
 
@@ -1218,15 +1400,42 @@ svg {
 .footer__top{
   display: grid;
   gap:2rem;
+}
+
+
+.footer__center{
+  display: grid;
+  gap:2rem;
   padding-bottom:1.25rem;
   margin-bottom: var(--mb-3);
 }
 
+.footer__info{
+  display: grid;
+  gap:2rem;
+}
+
+.footer__description{
+  color:var(--text-color-light);
+  font-size:var(--normal-font-size);
+}
 
 .footer__nav{
-  display:flex;
-  gap:1rem;
-  flex-wrap:wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 1rem;
+}
+
+.footer__nav-group{
+  display: flex;
+  flex-direction: column;
+  gap: .85rem;
+}
+
+.footer__nav-title{
+  color: var(--title-color);
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-medium);
 }
 
 
@@ -1277,6 +1486,13 @@ svg {
 .footer__copy{
   color:var(--text-color-light);
   font-size:var(--small-font-size);
+}
+
+.footer__copy .footer__nav-link{
+  font-size: inherit;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .footer__credit{
@@ -1422,11 +1638,6 @@ svg {
 
 
 @media screen and (min-width: 576px){
-  .nav__menu{
-    width: 380px;
-    margin-inline: auto;
-  }
-
   .home__container,
   .banner__container{
     grid-template-columns: 420px;
@@ -1838,10 +2049,11 @@ svg {
 /*-------------- Footer ------------*/
 
   .footer__container{
-    gap: 4rem;
+    gap: 3.5rem;
   }
 
-  .footer__top{
+  .footer__top,
+  .footer__center{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1853,9 +2065,26 @@ svg {
     height: auto;
   }
 
+  .footer__top,
+  .footer__center{
+    align-items: flex-start;
+  }
+
+  .footer__info{
+    display: grid;
+    gap:2rem;
+  }
+
+  .footer__description{
+    width: 400px;
+    color:var(--text-color-light);
+    font-size:var(--normal-font-size);
+  }
+
+
   .footer__nav{
     display: flex;
-    gap: 1.5rem;
+    gap: 3rem;
   }
 
   .footer__nav-link{

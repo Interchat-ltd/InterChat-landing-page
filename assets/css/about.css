@@ -1,0 +1,388 @@
+/*=============== ABOUT PAGE ===============*/
+@import url('/assets/css/styles.css');
+
+/*=============== SKIP LINK ===============*/
+.skip-link{
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 2000;
+  background: var(--first-color);
+  color: #fff;
+  padding: .75rem 1.25rem;
+  border-radius: .5rem;
+  font-weight: var(--font-medium);
+  transition: top .2s ease;
+}
+
+.skip-link:focus{
+  top: 1rem;
+}
+
+
+/*=============== SHARED LAYOUT ===============*/
+.about-hero__container,
+.about-why__container,
+.about-values__container,
+.about-features__container,
+.about-safety__container,
+.about-churches__container,
+.about-cta__container{
+  width: 100%;
+  max-width: 1120px;
+  margin-inline: auto;
+  margin-bottom: 5rem;
+  padding-inline: 1rem;
+}
+
+@media screen and (min-width: 320px){
+  .about-hero__container,
+  .about-why__container,
+  .about-values__container,
+  .about-features__container,
+  .about-safety__container,
+  .about-churches__container,
+  .about-cta__container{
+    padding-inline: 1rem;
+  }
+}
+
+.about-why,
+.about-safety{
+  background: linear-gradient(180deg, hsl(var(--hue), 87%, 97%), hsl(var(--hue), 87%, 98%));
+}
+
+.section__subtitle{
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+/*=============== PHOTOS ===============*/
+.about-photo{
+  margin: 0;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, hsl(var(--hue), 70%, 92%), hsl(var(--hue), 70%, 85%));
+}
+
+.about-photo img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*=============== HERO ===============*/
+
+.about-hero{
+  margin: 3rem auto 2rem;
+  place-items: center;
+  display: grid;
+  text-align: center;
+  justify-content: center;
+}
+
+.about-hero__container{
+  padding-top: 2rem;
+  place-items: center;
+  display: grid;
+  text-align: center;
+}
+
+.about-hero__title{
+  font-size: var(--bigger-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+  margin-bottom: 1rem;
+}
+
+.about-hero__mission{
+  color: var(--text-color-light);
+  max-width: 480px;
+  margin-bottom: 1.75rem;
+}
+
+.about-hero__actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+
+
+/*=============== WHY WE BUILT ===============*/
+.about-why__container{
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.about-why__title{
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+  margin-bottom: 1rem;
+  max-width: 20ch;
+}
+
+.about-why__paragraph{
+  color: var(--text-color-light);
+  margin-bottom: 1.25rem;
+}
+
+.about-why__media{
+  position: relative;
+  justify-self: center;
+  width: 100%;
+  max-width: 420px;
+}
+
+.about-why__media .about-photo--main{
+  aspect-ratio: 4 / 5;
+}
+
+.about-why__media .about-photo--accent{
+  position: absolute;
+  width: 42%;
+  aspect-ratio: 1 / 1;
+  right: -5%;
+  bottom: -10%;
+  border: 4px solid var(--body-color-white);
+  box-shadow: 0 16px 32px -12px rgba(0,0,0,.25);
+}
+
+/*=============== VALUES ===============*/
+.about-values__heading{
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.about-values__title{
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+}
+
+.about-values__cards{
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+/*=============== FEATURE ROWS ===============*/
+.about-features__heading{
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-features__title{
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+}
+
+/* .feature__card etc. (the homepage Feature section's own classes, from
+   styles.css) are reused as-is for these rows so the look matches exactly -
+   this file only needs to fit that card into this page's narrower 1120px
+   column instead of the homepage's fixed 1200px. */
+@media screen and (min-width: 1150px){
+  .about-features .feature__card{
+    width: 100%;
+  }
+}
+
+/*=============== SAFETY ===============*/
+.about-safety__heading{
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.about-safety__title{
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+}
+
+.about-safety__list{
+  list-style: none;
+  display: grid;
+  gap: 1.25rem;
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.about-safety__item{
+  display: flex;
+  align-items: flex-start;
+  gap: .85rem;
+  background: var(--container-color);
+  border-radius: 1rem;
+  padding: 1.1rem 1.25rem;
+}
+
+.about-safety__icon{
+  flex-shrink: 0;
+  font-size: 1.4rem;
+  color: var(--first-color);
+  margin-top: .1rem;
+}
+
+.about-safety__item p{
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
+  line-height: 1.6;
+}
+
+.about-safety__item a{
+  color: var(--first-color);
+  font-weight: var(--font-medium);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/*=============== CHURCHES ===============*/
+.about-churches__container{
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.about-churches__container .about-photo{
+  aspect-ratio: 4 / 3;
+}
+
+.about-churches__title{
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+  margin-bottom: 1rem;
+  max-width: 18ch;
+}
+
+.about-churches__description{
+  color: var(--text-color-light);
+  font-size: var(--normal-font-size);
+  margin-bottom: 1.5rem;
+  max-width: 44ch;
+}
+
+/*=============== CLOSING CTA ===============*/
+.about-cta{
+  text-align: center;
+  background: linear-gradient(165deg, hsl(var(--hue), 87%, 97%), hsl(var(--hue), 87%, 92%));
+}
+
+.about-cta__title{
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+  margin-bottom: 1.5rem;
+  max-width: 20ch;
+  margin-inline: auto;
+}
+
+.about-cta .store__button-container{
+  margin-inline: auto;
+  margin-bottom: 1.5rem;
+}
+
+.about-cta__help-link{
+  display: inline-block;
+  color: var(--first-color);
+  font-weight: var(--font-medium);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  min-height: 44px;
+}
+
+/*=============== SECONDARY BUTTON ===============*/
+.button--outline{
+  background: transparent;
+  color: var(--first-color);
+  border: 1px solid var(--first-color);
+  box-shadow: none;
+}
+
+.button--outline:hover{
+  background: hsl(var(--hue), 87%, 96%);
+}
+
+/*=============== CREDITS ===============*/
+.about-credits{
+  max-width: 1120px;
+  margin-inline: auto;
+  padding: 1.5rem 1rem 3rem;
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
+
+.about-credits summary{
+  cursor: pointer;
+  font-weight: var(--font-medium);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.about-credits ul{
+  margin-top: .75rem;
+  padding-left: 1.25rem;
+}
+
+.about-credits a{
+  color: var(--first-color);
+}
+
+/*=============== SCROLL-REVEAL (IntersectionObserver driven) ===============*/
+.fade-up{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.fade-up.is-visible{
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .fade-up{
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/*=============== RESPONSIVE ===============*/
+@media screen and (min-width: 768px){
+  .about-hero{
+    grid-template-columns: 580px;
+    margin-bottom: 6rem;
+  }
+
+  .about-hero__media{
+    justify-self: end;
+  }
+
+  .about-why__container{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-why__media{
+    justify-self: end;
+  }
+
+  .about-values__cards{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-churches__container{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .about-values__cards{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

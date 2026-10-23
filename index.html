@@ -39,6 +39,9 @@
                                 <a href="/features.html" class="nav__link">Features</a>
                             </li>
                             <li class="nav__item">
+                                <a href="/about.html" class="nav__link">About</a>
+                            </li>
+                            <li class="nav__item">
                                 <a href="/contact.html" class="nav__link">Contact</a>
                             </li>
                         </ul>
@@ -173,6 +176,10 @@
                             </p>
                         </article>
                     </div>
+
+                    <a href="/about.html" class="about__story-link">
+                        Read our story <i class='bx bx-right-arrow-alt'></i>
+                    </a>
                 </div>
             </section>
 
@@ -382,7 +389,97 @@
             </section>
 
 
+            <!--==================== FAQ ====================-->
+            <section class="faq section" id="faq">
+                <div class="faq__container container grid">
+                    <div class="faq__heading grid">
+                        <span class="section__subtitle">FAQ</span>
+                        <h2 class="faq__section-title">Questions? We've Got Answers.</h2>
+                        <p class="faq__section-description">
+                            The short version of what people ask us most. For everything else, our Help Centre has the full answers.
+                        </p>
+                    </div>
 
+                    <div class="faq__accordion">
+                        <div class="faq__item">
+                            <h3 class="faq__item-heading">
+                                <button type="button" class="faq__question" id="faq-q-1" aria-expanded="false" aria-controls="faq-a-1">
+                                    <span>Is InterChat free to use?</span>
+                                    <i class='bx bx-chevron-down faq__icon'></i>
+                                </button>
+                            </h3>
+                            <div class="faq__answer" id="faq-a-1" role="region" aria-labelledby="faq-q-1" hidden>
+                                <p>Yes. InterChat is free to use. InterChat Plus is an optional paid subscription with extra features, shown in the app when you subscribe.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq__item">
+                            <h3 class="faq__item-heading">
+                                <button type="button" class="faq__question" id="faq-q-2" aria-expanded="false" aria-controls="faq-a-2">
+                                    <span>Is InterChat end-to-end encrypted?</span>
+                                    <i class='bx bx-chevron-down faq__icon'></i>
+                                </button>
+                            </h3>
+                            <div class="faq__answer" id="faq-a-2" role="region" aria-labelledby="faq-q-2" hidden>
+                                <p>Honestly, no. Your messages are protected in transit, but InterChat's systems process them to deliver notification previews, power search and keep the community safe. Our staff don't read private messages as a matter of course.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq__item">
+                            <h3 class="faq__item-heading">
+                                <button type="button" class="faq__question" id="faq-q-3" aria-expanded="false" aria-controls="faq-a-3">
+                                    <span>What age do I need to be to join?</span>
+                                    <i class='bx bx-chevron-down faq__icon'></i>
+                                </button>
+                            </h3>
+                            <div class="faq__answer" id="faq-a-3" role="region" aria-labelledby="faq-q-3" hidden>
+                                <p>InterChat is for people aged 13 and older. We ask for your date of birth when you sign up to confirm this, and if you're under the age of digital consent where you live, you'll need a parent or guardian's permission.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq__item">
+                            <h3 class="faq__item-heading">
+                                <button type="button" class="faq__question" id="faq-q-4" aria-expanded="false" aria-controls="faq-a-4">
+                                    <span>Can I use InterChat with my own church or group?</span>
+                                    <i class='bx bx-chevron-down faq__icon'></i>
+                                </button>
+                            </h3>
+                            <div class="faq__answer" id="faq-a-4" role="region" aria-labelledby="faq-q-4" hidden>
+                                <p>Yes. Anyone can create a community, with templates for a Bible study, prayer group, church or friends - pick one to get started quickly, or build your own from scratch.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq__item">
+                            <h3 class="faq__item-heading">
+                                <button type="button" class="faq__question" id="faq-q-5" aria-expanded="false" aria-controls="faq-a-5">
+                                    <span>What is a Prayer Room?</span>
+                                    <i class='bx bx-chevron-down faq__icon'></i>
+                                </button>
+                            </h3>
+                            <div class="faq__answer" id="faq-a-5" role="region" aria-labelledby="faq-q-5" hidden>
+                                <p>A live voice gathering inside a community, where members take turns to pray together out loud. You join muted and unmute when it's your turn. Prayer Rooms aren't recorded.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq__item">
+                            <h3 class="faq__item-heading">
+                                <button type="button" class="faq__question" id="faq-q-6" aria-expanded="false" aria-controls="faq-a-6">
+                                    <span>How do I delete my account?</span>
+                                    <i class='bx bx-chevron-down faq__icon'></i>
+                                </button>
+                            </h3>
+                            <div class="faq__answer" id="faq-a-6" role="region" aria-labelledby="faq-q-6" hidden>
+                                <p>Anytime, from the app (Profile → Settings → Account → Delete account) or from <a href="/delete__user.html">this website</a>. It's immediate and can't be undone.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq__cta">
+                        <p class="faq__cta-text">Still have questions?</p>
+                        <a href="/help/" class="button faq__cta-button">Visit Help Centre</a>
+                    </div>
+                </div>
+            </section>
 
 
             <!--==================== Banner ====================-->
@@ -440,31 +537,64 @@
             <section class="footer section" id="footer">
                 <div class="footer__container container grid">
                     <div class="footer__top grid">
-                            <div class="footer__brand">
-                                <img src="assets/img/InterChat.png" alt="footer logo" class="footer__logo">
-                            </div>
+                        <div class="footer__brand">
+                                <a href="/index.html" class="nav__logo">
+                                    <img src="assets/img/Logo+text.png" class="nav__logo-img" alt="InterChat Logo">
+                                </a>
+                        </div>
 
-                            <nav class="footer__nav" aria-label="Footer">
-                        <a href="/index.html" class="footer__nav-link">Home</a>
-                        <a href="/features.html" class="footer__nav-link">Features</a>
-                        <a href="/index.html#about" class="footer__nav-link">About</a>
-                        <a href="/help.html" class="footer__nav-link">Help</a>
-                        <a href="/guidelines.html" class="footer__nav-link">Guidelines</a>
-                        <a href="/privacy.html" class="footer__nav-link">Privacy</a>
-                        <a href="/terms.html" class="footer__nav-link">Terms</a>
-                        <a href="/child-safety.html" class="footer__nav-link">Child safety</a>
-                        <a href="/delete__user.html" class="footer__nav-link">Delete account</a>
-                    </nav>
-
-                            <div class="footer__social">
+                            
+                        <div class="footer__social">
                                 <p class="footer__social-text">Socials</p>
                                 <a href="#" class="footer__social-link"><i class='bx bxl-facebook'></i></a>
                                 <a href="#" class="footer__social-link"><i class='bx bxl-twitter'></i></a>
                                 <a href="#" class="footer__social-link"><i class='bx bxl-instagram'></i></a>
-                            </div>
+                        </div>
+
                     </div>
 
+
                     <div class="line"></div>
+
+                    <div class="footer__center grid">
+                        <div class="footer__info">
+                            <p class="footer__description">
+                            Faith feels better together. Download InterChat and join the community today.
+                            </p>
+
+
+                            <div class="store-buttons">
+                                <a href="https://apps.apple.com" target="_blank" class="store-button">
+                                    <img src="assets/img/Apple.png" alt="Download on the App Store" class="store-button-img">
+                                </a>
+                                <a href="https://play.google.com/store" target="_blank" class="store-button">
+                                    <img src="assets/img/Google.png" alt="Get it on Google Play" class="store-button-img">
+                                </a>
+                            </div>
+                        </div>
+
+                            
+                        <nav class="footer__nav" aria-label="Footer">
+                                <div class="footer__nav-group">
+                                    <p class="footer__nav-title">Explore</p>
+                                    <a href="/index.html" class="footer__nav-link">Home</a>
+                                    <a href="/features.html" class="footer__nav-link">Features</a>
+                                    <a href="/about.html" class="footer__nav-link">About</a>
+                                </div>
+                                <div class="footer__nav-group">
+                                    <p class="footer__nav-title">Support</p>
+                                    <a href="/help/" class="footer__nav-link">Help</a>
+                                    <a href="/delete__user.html" class="footer__nav-link">Delete account</a>
+                                </div>
+                                <div class="footer__nav-group">
+                                    <p class="footer__nav-title">Legal</p>
+                                    <a href="/guidelines.html" class="footer__nav-link">Guidelines</a>
+                                    <a href="/privacy.html" class="footer__nav-link">Privacy</a>
+                                    <a href="/terms.html" class="footer__nav-link">Terms</a>
+                                    <a href="/child-safety.html" class="footer__nav-link">Child safety</a>
+                                </div>
+                        </nav>
+                    </div>
 
 
                     <div class="footer__watermark">
@@ -472,7 +602,7 @@
                     </div>
 
                     <div class="footer__bottom">
-                        <p class="footer__copy">&copy; 2025 - InterChat. All rights reserved.</p>
+                        <p class="footer__copy">&copy; 2026 - InterChat. All rights reserved. <a href="/cookies.html" class="footer__nav-link">Cookies</a> · <a href="/copyright.html" class="footer__nav-link">Copyright</a></p>
                         <p class="footer__credit">Designed by Jaytech</p>
                     </div>
                 </div>

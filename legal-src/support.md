@@ -1,3 +1,7 @@
+<!-- Superseded by the Help Centre (legal-src/help/**), built by build_help_centre()
+     in build.py and published at /help/. This file is no longer built or linked
+     anywhere; kept only as a record of what the questions used to look like
+     before they were split into individual articles. Safe to delete. -->
 
 # Help & Support
 
