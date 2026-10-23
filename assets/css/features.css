@@ -21,11 +21,97 @@
     background-color: var(--body-color);
 }
 
+/*=============== JUMP NAV ===============*/
+.feature__jump{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .6rem;
+    margin-top: 1.5rem;
+}
+
+.feature__jump-link{
+    display: inline-flex;
+    align-items: center;
+    padding: .55rem 1.1rem;
+    border-radius: 1.5rem;
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-medium);
+    color: var(--first-color);
+    background-color: hsl(var(--hue), 87%, 96%);
+    transition: .25s;
+}
+
+.feature__jump-link:hover{
+    background-color: var(--first-color);
+    color: #fff;
+}
+
+/*=============== FEATURE GROUPS ===============*/
+.feature__group{
+    margin-bottom: 4rem;
+}
+
+.feature__group:last-child{
+    margin-bottom: 0;
+}
+
+.feature__group-heading{
+    display: grid;
+    gap: .5rem;
+    place-items: center;
+    margin-bottom: 6rem;
+    scroll-margin-top: calc(var(--header-height) + 1rem);
+}
+
+.feature__group-title{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+    scroll-margin-top: calc(var(--header-height) + 1rem);
+}
+
+.feature__group-description{
+    color: var(--text-color-light);
+    margin-top: .35rem;
+}
+
+/*=============== ICON PLACEHOLDER TILES ===============*/
+/* Used for features that don't have a real app screenshot yet - a deliberate
+   icon-card look (not a broken-image placeholder) that also breaks up the
+   long run of phone screenshots a little. Swap for a <picture> like the
+   other cards once a real mockup exists. */
+.feature__image--icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    aspect-ratio: 1 / 1;
+    border-radius: 1.5rem;
+    background: linear-gradient(135deg, hsl(var(--hue), 70%, 92%), hsl(var(--hue), 70%, 85%));
+}
+
+.feature__icon{
+    font-size: 4.5rem;
+    color: var(--first-color);
+}
+
+@media screen and (min-width: 1150px){
+    .feature__image--icon{
+        width: 320px;
+    }
+
+    .feature__icon{
+        font-size: 6rem;
+    }
+}
+
 
 .benefits{
     display: grid;
     gap: 1rem;
     text-align: left;
+    margin-bottom: 2rem;
 }
 
 .benefits__title{
